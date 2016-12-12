@@ -101,6 +101,7 @@
 		A746B52C1DFE909800C769B6 /* NSNumberExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A746B4DA1DFE909800C769B6 /* NSNumberExtensions.h */; };
 		A746B52D1DFE909800C769B6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */; };
 		A746B52E1DFE909800C769B6 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A746B4DC1DFE909800C769B6 /* License.txt */; };
+		A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */; };
 		DDA364E41D2BB28C00927316 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC6ED551BA461BA007713F1 /* CoreData.framework */; };
 		DDA364E51D2BB2C500927316 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191199E41CBBA3A500156831 /* MessageUI.framework */; };
 		DDA364E61D2BB2DD00927316 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E570E1C1B90F0F400D65413 /* WebKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -265,6 +266,8 @@
 		A746B4DA1DFE909800C769B6 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../Library/core-plot/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A746B4DC1DFE909800C769B6 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = "../Library/core-plot/License.txt"; sourceTree = "<group>"; };
+		A746B52F1DFE943400C769B6 /* Adage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Adage-Bridging-Header.h"; sourceTree = "<group>"; };
+		A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EvaluateFormulae.swift; path = iPadCustomWidgets/EvaluateFormulae.swift; sourceTree = "<group>"; };
 		D603C70D1D38BA5100480A06 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -425,6 +428,8 @@
 		A746B4871DFE8A5500C769B6 /* iPadWidgets */ = {
 			isa = PBXGroup;
 			children = (
+				A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */,
+				A746B52F1DFE943400C769B6 /* Adage-Bridging-Header.h */,
 			);
 			name = iPadWidgets;
 			sourceTree = "<group>";
@@ -646,6 +651,11 @@
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Third I, Inc.";
+				TargetAttributes = {
+					8E8C944D1BCD136600D8D99A = {
+						LastSwiftMigration = 0810;
+					};
+				};
 			};
 			buildConfigurationList = 8EA8B1B71B90EEA10063204B /* Build configuration list for PBXProject "Adage" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -707,6 +717,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED487541CAAC00300DF2648 /* main.m in Sources */,
+				A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +841,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -873,6 +886,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -914,6 +930,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";

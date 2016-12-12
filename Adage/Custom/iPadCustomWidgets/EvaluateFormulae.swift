@@ -13,7 +13,7 @@ class EvaluateFormulae: NSObject {
     //MARK: - *** Functionality Methods ***
     func evaluateFormula (_ formula: String, metrics: Dictionary<String, Any>) -> NSDecimalNumber {
         
-        var workingFormula: String = formula.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        var workingFormula: String = formula.trimmingCharacters(in: .whitespaces)
         var resultValue: NSDecimalNumber = 0
         
         if workingFormula.hasPrefix("if") {

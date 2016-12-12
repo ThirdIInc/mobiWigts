@@ -19,6 +19,10 @@
 		8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */; };
 		8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487171CAA253400DF2648 /* Settings.bundle */; };
 		8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487151CAA253400DF2648 /* Images.xcassets */; };
+		A73A648F1DFED41700531549 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648C1DFED41700531549 /* CustomControl.swift */; };
+		A73A64901DFED41700531549 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648D1DFED41700531549 /* CustomLabel.swift */; };
+		A73A64911DFED41700531549 /* SecretStorageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648E1DFED41700531549 /* SecretStorageReader.swift */; };
+		A73A64931DFED70400531549 /* VariableGoldmine.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73A64921DFED70400531549 /* VariableGoldmine.plist */; };
 		A746B4DD1DFE909800C769B6 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B48A1DFE909800C769B6 /* CorePlot.framework */; };
 		A746B52E1DFE909800C769B6 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A746B4DC1DFE909800C769B6 /* License.txt */; };
 		A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */; };
@@ -107,6 +111,10 @@
 		A7238F671DFE89430072A5E7 /* AdageSDK_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdageSDK_Prefix.pch; path = AdageSDK/AdageSDK_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		A7238F681DFE89430072A5E7 /* AdageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdageSDK.h; path = AdageSDK/AdageSDK.h; sourceTree = SOURCE_ROOT; };
 		A7238F691DFE89430072A5E7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AdageSDK/Info.plist; sourceTree = SOURCE_ROOT; };
+		A73A648C1DFED41700531549 /* CustomControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomControl.swift; path = iPadCustomWidgets/CustomControl.swift; sourceTree = "<group>"; };
+		A73A648D1DFED41700531549 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = iPadCustomWidgets/CustomLabel.swift; sourceTree = "<group>"; };
+		A73A648E1DFED41700531549 /* SecretStorageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecretStorageReader.swift; path = iPadCustomWidgets/SecretStorageReader.swift; sourceTree = "<group>"; };
+		A73A64921DFED70400531549 /* VariableGoldmine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VariableGoldmine.plist; path = iPadCustomWidgets/VariableGoldmine.plist; sourceTree = "<group>"; };
 		A746B48A1DFE909800C769B6 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = "../Library/core-plot/CorePlot.framework"; sourceTree = "<group>"; };
 		A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../Library/core-plot/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A746B4DC1DFE909800C769B6 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = "../Library/core-plot/License.txt"; sourceTree = "<group>"; };
@@ -272,8 +280,12 @@
 		A746B4871DFE8A5500C769B6 /* iPadWidgets */ = {
 			isa = PBXGroup;
 			children = (
-				A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */,
 				A746B52F1DFE943400C769B6 /* Adage-Bridging-Header.h */,
+				A73A64921DFED70400531549 /* VariableGoldmine.plist */,
+				A73A648C1DFED41700531549 /* CustomControl.swift */,
+				A73A648D1DFED41700531549 /* CustomLabel.swift */,
+				A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */,
+				A73A648E1DFED41700531549 /* SecretStorageReader.swift */,
 			);
 			name = iPadWidgets;
 			sourceTree = "<group>";
@@ -362,6 +374,7 @@
 				8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */,
 				728CB4F51D742D01000DCAAA /* IconFont in Resources */,
 				8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */,
+				A73A64931DFED70400531549 /* VariableGoldmine.plist in Resources */,
 				728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */,
 				A746B52E1DFE909800C769B6 /* License.txt in Resources */,
 				8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */,
@@ -394,7 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED487541CAAC00300DF2648 /* main.m in Sources */,
+				A73A648F1DFED41700531549 /* CustomControl.swift in Sources */,
 				A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */,
+				A73A64901DFED41700531549 /* CustomLabel.swift in Sources */,
+				A73A64911DFED41700531549 /* SecretStorageReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,9 @@
 //
-//  MicroStrategyMobileSDK.h
-//  MicroStrategyMobileSDK
+//  AdageSDK.h
+//  AdageSDK
 //
-//  Created by Jin, Ji on 9/11/15.
-//  Copyright (c) 2015 MicroStratgy Inc. All rights reserved.
+//  Created by Pradeep Yadav on 12/12/16.
+//  Copyright (c) 2016 Third I, Inc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -22,7 +22,6 @@ FOUNDATION_EXPORT const unsigned char MicroStrategyMobileSDKVersionString[];
 #import <MicroStrategyMobileSDK/Enums.h>
 #import <MicroStrategyMobileSDK/FileUtils.h>
 #import <MicroStrategyMobileSDK/MSIDevicePreferences.h>
-//#import <MicroStrategyMobileSDK/MSIDocumentInstance.h>
 #import <MicroStrategyMobileSDK/MSIFiltersPanelStackDelegate.h>
 #import <MicroStrategyMobileSDK/MSIGeneric.h>
 #import <MicroStrategyMobileSDK/MSILayoutInfo.h>
@@ -45,8 +44,6 @@ FOUNDATION_EXPORT const unsigned char MicroStrategyMobileSDKVersionString[];
 #import <MicroStrategyMobileSDK/Service.h>
 #import <MicroStrategyMobileSDK/MSIProjectInfo.h>
 #import <MicroStrategyMobileSDK/MSISerializable.h>
-//#import <MicroStrategyMobileSDK/MSIDocumentIterator.h>
-//#import <MicroStrategyMobileSDK/MSIRWIterator.h>
 #import <MicroStrategyMobileSDK/MSILiveReportInfo.h>
 #import <MicroStrategyMobileSDK/ReportInfo.h>
 #import <MicroStrategyMobileSDK/ReportStore.h>

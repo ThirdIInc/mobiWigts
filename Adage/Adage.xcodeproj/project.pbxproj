@@ -14,7 +14,6 @@
 		728CB4F51D742D01000DCAAA /* IconFont in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4F31D742CFB000DCAAA /* IconFont */; };
 		8ED487541CAAC00300DF2648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED487501CAABFE100DF2648 /* main.m */; };
 		8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487561CAAC29300DF2648 /* Default-Landscape.png */; };
-		8ED487591CAAC29300DF2648 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487571CAAC29300DF2648 /* Default-Portrait.png */; };
 		8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875A1CAAC2C600DF2648 /* Preferences.xml */; };
 		8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */; };
 		8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487171CAA253400DF2648 /* Settings.bundle */; };
@@ -23,6 +22,9 @@
 		A73A64901DFED41700531549 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648D1DFED41700531549 /* CustomLabel.swift */; };
 		A73A64911DFED41700531549 /* SecretStorageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648E1DFED41700531549 /* SecretStorageReader.swift */; };
 		A73A64931DFED70400531549 /* VariableGoldmine.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73A64921DFED70400531549 /* VariableGoldmine.plist */; };
+		A73A64951DFEDBB600531549 /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A64941DFEDBB600531549 /* CustomController.swift */; };
+		A73A64971DFEE2B300531549 /* Adage-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */; };
+		A73A64C11DFEE95400531549 /* Adage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = A73A64C01DFEE95400531549 /* Adage_Prefix.pch */; };
 		A746B4DD1DFE909800C769B6 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B48A1DFE909800C769B6 /* CorePlot.framework */; };
 		A746B52E1DFE909800C769B6 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A746B4DC1DFE909800C769B6 /* License.txt */; };
 		A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */; };
@@ -104,21 +106,19 @@
 		8ED487171CAA253400DF2648 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8ED487501CAABFE100DF2648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OtherSources/main.m; sourceTree = SOURCE_ROOT; };
 		8ED487561CAAC29300DF2648 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "iPad/Default-Landscape.png"; sourceTree = SOURCE_ROOT; };
-		8ED487571CAAC29300DF2648 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "iPad/Default-Portrait.png"; sourceTree = SOURCE_ROOT; };
 		8ED4875A1CAAC2C600DF2648 /* Preferences.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Preferences.xml; path = iPad/Preferences.xml; sourceTree = SOURCE_ROOT; };
 		8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		8ED487601CAADAED00DF2648 /* Info_IPad.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_IPad.plist; sourceTree = SOURCE_ROOT; };
-		A7238F671DFE89430072A5E7 /* AdageSDK_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdageSDK_Prefix.pch; path = AdageSDK/AdageSDK_Prefix.pch; sourceTree = SOURCE_ROOT; };
-		A7238F681DFE89430072A5E7 /* AdageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdageSDK.h; path = AdageSDK/AdageSDK.h; sourceTree = SOURCE_ROOT; };
-		A7238F691DFE89430072A5E7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AdageSDK/Info.plist; sourceTree = SOURCE_ROOT; };
 		A73A648C1DFED41700531549 /* CustomControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomControl.swift; path = iPadCustomWidgets/CustomControl.swift; sourceTree = "<group>"; };
 		A73A648D1DFED41700531549 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = iPadCustomWidgets/CustomLabel.swift; sourceTree = "<group>"; };
 		A73A648E1DFED41700531549 /* SecretStorageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecretStorageReader.swift; path = iPadCustomWidgets/SecretStorageReader.swift; sourceTree = "<group>"; };
 		A73A64921DFED70400531549 /* VariableGoldmine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VariableGoldmine.plist; path = iPadCustomWidgets/VariableGoldmine.plist; sourceTree = "<group>"; };
+		A73A64941DFEDBB600531549 /* CustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = iPadCustomWidgets/CustomController.swift; sourceTree = "<group>"; };
+		A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Adage-Bridging-Header.h"; sourceTree = "<group>"; };
+		A73A64C01DFEE95400531549 /* Adage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adage_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		A746B48A1DFE909800C769B6 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = "../Library/core-plot/CorePlot.framework"; sourceTree = "<group>"; };
 		A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../Library/core-plot/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A746B4DC1DFE909800C769B6 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = "../Library/core-plot/License.txt"; sourceTree = "<group>"; };
-		A746B52F1DFE943400C769B6 /* Adage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Adage-Bridging-Header.h"; sourceTree = "<group>"; };
 		A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EvaluateFormulae.swift; path = iPadCustomWidgets/EvaluateFormulae.swift; sourceTree = "<group>"; };
 		D603C70D1D38BA5100480A06 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -218,7 +218,6 @@
 			children = (
 				193746241CF5851800C7A378 /* Entitlements.plist */,
 				8ED487561CAAC29300DF2648 /* Default-Landscape.png */,
-				8ED487571CAAC29300DF2648 /* Default-Portrait.png */,
 				8ED4875A1CAAC2C600DF2648 /* Preferences.xml */,
 			);
 			path = iPad;
@@ -228,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				8ED487501CAABFE100DF2648 /* main.m */,
+				A73A64C01DFEE95400531549 /* Adage_Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -238,7 +238,6 @@
 				0B9DCACC1D2A4A0000F4DF57 /* Custom */,
 				8E8C94121BCD119D00D8D99A /* Adage */,
 				8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */,
-				8EC6C9141BA3CC27007713F1 /* AdageSDK */,
 				8ED487081CAA252500DF2648 /* Resource */,
 				8E570E171B90F0CC00D65413 /* Frameworks */,
 				8EA8B1BD1B90EEA10063204B /* Products */,
@@ -251,17 +250,6 @@
 				8E8C94641BCD136600D8D99A /* Adage.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8EC6C9141BA3CC27007713F1 /* AdageSDK */ = {
-			isa = PBXGroup;
-			children = (
-				A7238F671DFE89430072A5E7 /* AdageSDK_Prefix.pch */,
-				A7238F681DFE89430072A5E7 /* AdageSDK.h */,
-				A7238F691DFE89430072A5E7 /* Info.plist */,
-			);
-			name = AdageSDK;
-			path = MicroStrategyMobileSDK;
 			sourceTree = "<group>";
 		};
 		8ED487081CAA252500DF2648 /* Resource */ = {
@@ -280,12 +268,13 @@
 		A746B4871DFE8A5500C769B6 /* iPadWidgets */ = {
 			isa = PBXGroup;
 			children = (
-				A746B52F1DFE943400C769B6 /* Adage-Bridging-Header.h */,
 				A73A64921DFED70400531549 /* VariableGoldmine.plist */,
+				A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */,
 				A73A648C1DFED41700531549 /* CustomControl.swift */,
 				A73A648D1DFED41700531549 /* CustomLabel.swift */,
 				A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */,
 				A73A648E1DFED41700531549 /* SecretStorageReader.swift */,
+				A73A64941DFEDBB600531549 /* CustomController.swift */,
 			);
 			name = iPadWidgets;
 			sourceTree = "<group>";
@@ -307,6 +296,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73A64C11DFEE95400531549 /* Adage_Prefix.pch in Headers */,
+				A73A64971DFEE2B300531549 /* Adage-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +369,6 @@
 				728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */,
 				A746B52E1DFE909800C769B6 /* License.txt in Resources */,
 				8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */,
-				8ED487591CAAC29300DF2648 /* Default-Portrait.png in Resources */,
 				8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73A64951DFEDBB600531549 /* CustomController.swift in Sources */,
 				8ED487541CAAC00300DF2648 /* main.m in Sources */,
 				A73A648F1DFED41700531549 /* CustomControl.swift in Sources */,
 				A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */,
@@ -452,7 +443,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					NDEBUG,
@@ -478,8 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../3rdParty/AppConnect\"",
-					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
+					"$(PROJECT_DIR)/../Library",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (
@@ -509,26 +499,28 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Library\"/**",
 				);
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
-					"$(PROJECT_DIR)/../Library/core-plot",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = (
@@ -560,27 +552,29 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Library\"/**",
 				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
-					"$(PROJECT_DIR)/../Library/core-plot",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = (
@@ -612,26 +606,28 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				ENABLE_BITCODE = NO;
-				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Library\"/**",
 				);
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
-					"$(PROJECT_DIR)/../Library/core-plot",
+					"$(PROJECT_DIR)/../Library/**",
 				);
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = (
@@ -689,7 +685,7 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					_DEBUG,
@@ -717,8 +713,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../3rdParty/AppConnect\"",
-					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
+					"$(PROJECT_DIR)/../Library",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -772,7 +767,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = AdageSDK/AdageSDK_Prefix.pch;
+				GCC_PREFIX_HEADER = Adage_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					NDEBUG,
@@ -798,8 +793,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../3rdParty/AppConnect\"",
-					"$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS",
+					"$(PROJECT_DIR)/../Library",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = (

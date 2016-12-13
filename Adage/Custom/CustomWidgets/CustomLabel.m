@@ -28,7 +28,7 @@
 @synthesize category;
 @synthesize format;
 
--(UIView *)initializeLabel:(CGRect)frame withTag:(NSInteger)tag {
+-(UIView *)initializeLabel:(CGRect)frame withTag:(int)tag {
 	
 	UIView *uivContainer = [[UIView alloc]initWithFrame:frame];
 	lblValue = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];

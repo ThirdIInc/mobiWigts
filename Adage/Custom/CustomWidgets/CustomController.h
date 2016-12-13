@@ -16,6 +16,9 @@
 
 #import <MicroStrategyMobileSDK/MSIWidgetViewer.h>
 #import <MicroStrategyMobileSDK/MSIWidgetHelper.h>
+#import <MicroStrategyMobileSDK/MetricHeader.h>
+#import <MicroStrategyMobileSDK/MetricValue.h>
+#import <MicroStrategyMobileSDK/MSIPropertyGroup.h>
 
 @interface CustomController : MSIWidgetViewer {
 	

@@ -48,6 +48,6 @@
 @property (strong,nonatomic) NSString *format;
 //  Padding parameters
 
--(UIView*)initializeLabel:(CGRect)frame withTag:(NSInteger)tag;
+-(UIView*)initializeLabel:(CGRect)frame withTag:(int)tag;
 
 @end

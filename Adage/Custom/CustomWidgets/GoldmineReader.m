@@ -11,7 +11,7 @@
 @implementation GoldmineReader
 
 // Function to set values in plist
-+(void)setValue:(NSString *)Value keyForSlider:(NSString *)Key {
++(void)setValue:(NSString *)Value forKey:(NSString *)Key {
 	NSArray *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentFolder = [documentPath objectAtIndex:0];
 	

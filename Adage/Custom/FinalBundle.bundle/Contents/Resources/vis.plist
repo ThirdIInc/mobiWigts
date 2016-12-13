@@ -69,5 +69,7 @@
 		<key>iPhone</key>
 		<string>SubClassOf UIView</string>
 	</dict>
+	<key>CustomControllerStyle</key>
+	<string>CustomController</string>
 </dict>
 </plist>

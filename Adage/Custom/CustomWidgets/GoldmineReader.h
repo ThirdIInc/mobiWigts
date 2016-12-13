@@ -11,7 +11,7 @@
 @interface GoldmineReader : NSObject
 
 //  Function to set values in plist
-+(void)setValue:(NSString *)Value keyForSlider:(NSString *)Key;
++(void)setValue:(NSString *)Value forKey:(NSString *)Key;
 
 //  Function to get values from plist
 +(NSDictionary *)getValue;

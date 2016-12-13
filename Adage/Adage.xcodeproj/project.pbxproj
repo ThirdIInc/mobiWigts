@@ -18,16 +18,20 @@
 		8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */; };
 		8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487171CAA253400DF2648 /* Settings.bundle */; };
 		8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487151CAA253400DF2648 /* Images.xcassets */; };
-		A73A648F1DFED41700531549 /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648C1DFED41700531549 /* CustomControl.swift */; };
-		A73A64901DFED41700531549 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648D1DFED41700531549 /* CustomLabel.swift */; };
-		A73A64911DFED41700531549 /* SecretStorageReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A648E1DFED41700531549 /* SecretStorageReader.swift */; };
 		A73A64931DFED70400531549 /* VariableGoldmine.plist in Resources */ = {isa = PBXBuildFile; fileRef = A73A64921DFED70400531549 /* VariableGoldmine.plist */; };
-		A73A64951DFEDBB600531549 /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73A64941DFEDBB600531549 /* CustomController.swift */; };
-		A73A64971DFEE2B300531549 /* Adage-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */; };
 		A73A64C11DFEE95400531549 /* Adage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = A73A64C01DFEE95400531549 /* Adage_Prefix.pch */; };
+		A73A64C41DFFD17700531549 /* GoldmineReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64C21DFFD17700531549 /* GoldmineReader.h */; };
+		A73A64C51DFFD17700531549 /* GoldmineReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A64C31DFFD17700531549 /* GoldmineReader.m */; };
+		A73A64C81DFFD57900531549 /* CustomControl.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64C61DFFD57900531549 /* CustomControl.h */; };
+		A73A64C91DFFD57900531549 /* CustomControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A64C71DFFD57900531549 /* CustomControl.m */; };
+		A73A64CC1DFFD73400531549 /* CustomLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64CA1DFFD73400531549 /* CustomLabel.h */; };
+		A73A64CD1DFFD73400531549 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A64CB1DFFD73400531549 /* CustomLabel.m */; };
+		A73A64D01DFFDDBB00531549 /* EvaluateFormulae.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64CE1DFFDDBB00531549 /* EvaluateFormulae.h */; };
+		A73A64D11DFFDDBB00531549 /* EvaluateFormulae.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A64CF1DFFDDBB00531549 /* EvaluateFormulae.m */; };
+		A73A64D41DFFDF1400531549 /* CustomController.h in Headers */ = {isa = PBXBuildFile; fileRef = A73A64D21DFFDF1400531549 /* CustomController.h */; };
+		A73A64D51DFFDF1400531549 /* CustomController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73A64D31DFFDF1400531549 /* CustomController.m */; };
 		A746B4DD1DFE909800C769B6 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B48A1DFE909800C769B6 /* CorePlot.framework */; };
 		A746B52E1DFE909800C769B6 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A746B4DC1DFE909800C769B6 /* License.txt */; };
-		A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */ = {isa = PBXBuildFile; fileRef = A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */; };
 		A746B5321DFEB9A500C769B6 /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A746B48A1DFE909800C769B6 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A746B5331DFEB9C300C769B6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */; };
 		DDA364E41D2BB28C00927316 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC6ED551BA461BA007713F1 /* CoreData.framework */; };
@@ -109,17 +113,21 @@
 		8ED4875A1CAAC2C600DF2648 /* Preferences.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Preferences.xml; path = iPad/Preferences.xml; sourceTree = SOURCE_ROOT; };
 		8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		8ED487601CAADAED00DF2648 /* Info_IPad.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_IPad.plist; sourceTree = SOURCE_ROOT; };
-		A73A648C1DFED41700531549 /* CustomControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomControl.swift; path = iPadCustomWidgets/CustomControl.swift; sourceTree = "<group>"; };
-		A73A648D1DFED41700531549 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomLabel.swift; path = iPadCustomWidgets/CustomLabel.swift; sourceTree = "<group>"; };
-		A73A648E1DFED41700531549 /* SecretStorageReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecretStorageReader.swift; path = iPadCustomWidgets/SecretStorageReader.swift; sourceTree = "<group>"; };
 		A73A64921DFED70400531549 /* VariableGoldmine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VariableGoldmine.plist; path = iPadCustomWidgets/VariableGoldmine.plist; sourceTree = "<group>"; };
-		A73A64941DFEDBB600531549 /* CustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = iPadCustomWidgets/CustomController.swift; sourceTree = "<group>"; };
-		A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Adage-Bridging-Header.h"; sourceTree = "<group>"; };
 		A73A64C01DFEE95400531549 /* Adage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adage_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		A73A64C21DFFD17700531549 /* GoldmineReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoldmineReader.h; path = iPadCustomWidgets/GoldmineReader.h; sourceTree = "<group>"; };
+		A73A64C31DFFD17700531549 /* GoldmineReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoldmineReader.m; path = iPadCustomWidgets/GoldmineReader.m; sourceTree = "<group>"; };
+		A73A64C61DFFD57900531549 /* CustomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomControl.h; path = iPadCustomWidgets/CustomControl.h; sourceTree = "<group>"; };
+		A73A64C71DFFD57900531549 /* CustomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomControl.m; path = iPadCustomWidgets/CustomControl.m; sourceTree = "<group>"; };
+		A73A64CA1DFFD73400531549 /* CustomLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomLabel.h; path = iPadCustomWidgets/CustomLabel.h; sourceTree = "<group>"; };
+		A73A64CB1DFFD73400531549 /* CustomLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomLabel.m; path = iPadCustomWidgets/CustomLabel.m; sourceTree = "<group>"; };
+		A73A64CE1DFFDDBB00531549 /* EvaluateFormulae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EvaluateFormulae.h; path = iPadCustomWidgets/EvaluateFormulae.h; sourceTree = "<group>"; };
+		A73A64CF1DFFDDBB00531549 /* EvaluateFormulae.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EvaluateFormulae.m; path = iPadCustomWidgets/EvaluateFormulae.m; sourceTree = "<group>"; };
+		A73A64D21DFFDF1400531549 /* CustomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomController.h; path = iPadCustomWidgets/CustomController.h; sourceTree = "<group>"; };
+		A73A64D31DFFDF1400531549 /* CustomController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomController.m; path = iPadCustomWidgets/CustomController.m; sourceTree = "<group>"; };
 		A746B48A1DFE909800C769B6 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = "../Library/core-plot/CorePlot.framework"; sourceTree = "<group>"; };
 		A746B4DB1DFE909800C769B6 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "../Library/core-plot/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A746B4DC1DFE909800C769B6 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = "../Library/core-plot/License.txt"; sourceTree = "<group>"; };
-		A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EvaluateFormulae.swift; path = iPadCustomWidgets/EvaluateFormulae.swift; sourceTree = "<group>"; };
 		D603C70D1D38BA5100480A06 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -269,12 +277,16 @@
 			isa = PBXGroup;
 			children = (
 				A73A64921DFED70400531549 /* VariableGoldmine.plist */,
-				A73A64961DFEE2B300531549 /* Adage-Bridging-Header.h */,
-				A73A648C1DFED41700531549 /* CustomControl.swift */,
-				A73A648D1DFED41700531549 /* CustomLabel.swift */,
-				A746B5301DFE943500C769B6 /* EvaluateFormulae.swift */,
-				A73A648E1DFED41700531549 /* SecretStorageReader.swift */,
-				A73A64941DFEDBB600531549 /* CustomController.swift */,
+				A73A64CA1DFFD73400531549 /* CustomLabel.h */,
+				A73A64CB1DFFD73400531549 /* CustomLabel.m */,
+				A73A64CE1DFFDDBB00531549 /* EvaluateFormulae.h */,
+				A73A64CF1DFFDDBB00531549 /* EvaluateFormulae.m */,
+				A73A64C21DFFD17700531549 /* GoldmineReader.h */,
+				A73A64C31DFFD17700531549 /* GoldmineReader.m */,
+				A73A64C61DFFD57900531549 /* CustomControl.h */,
+				A73A64C71DFFD57900531549 /* CustomControl.m */,
+				A73A64D21DFFDF1400531549 /* CustomController.h */,
+				A73A64D31DFFDF1400531549 /* CustomController.m */,
 			);
 			name = iPadWidgets;
 			sourceTree = "<group>";
@@ -297,7 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73A64C11DFEE95400531549 /* Adage_Prefix.pch in Headers */,
-				A73A64971DFEE2B300531549 /* Adage-Bridging-Header.h in Headers */,
+				A73A64D41DFFDF1400531549 /* CustomController.h in Headers */,
+				A73A64C41DFFD17700531549 /* GoldmineReader.h in Headers */,
+				A73A64D01DFFDDBB00531549 /* EvaluateFormulae.h in Headers */,
+				A73A64CC1DFFD73400531549 /* CustomLabel.h in Headers */,
+				A73A64C81DFFD57900531549 /* CustomControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,12 +412,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A73A64951DFEDBB600531549 /* CustomController.swift in Sources */,
+				A73A64C91DFFD57900531549 /* CustomControl.m in Sources */,
+				A73A64C51DFFD17700531549 /* GoldmineReader.m in Sources */,
+				A73A64D11DFFDDBB00531549 /* EvaluateFormulae.m in Sources */,
+				A73A64CD1DFFD73400531549 /* CustomLabel.m in Sources */,
+				A73A64D51DFFDF1400531549 /* CustomController.m in Sources */,
 				8ED487541CAAC00300DF2648 /* main.m in Sources */,
-				A73A648F1DFED41700531549 /* CustomControl.swift in Sources */,
-				A746B5311DFE943500C769B6 /* EvaluateFormulae.swift in Sources */,
-				A73A64901DFED41700531549 /* CustomLabel.swift in Sources */,
-				A73A64911DFED41700531549 /* SecretStorageReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +517,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,7 +549,7 @@
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
-				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -554,7 +570,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,7 +603,7 @@
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
-				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
@@ -608,7 +624,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9XR678NU78;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj *.framework";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +656,7 @@
 				PRODUCT_NAME = Adage;
 				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
-				SWIFT_OBJC_BRIDGING_HEADER = "Custom/Adage-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;

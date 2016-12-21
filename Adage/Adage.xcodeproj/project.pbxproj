@@ -12,6 +12,9 @@
 		728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */; };
 		728CB4A51D74269E000DCAAA /* FinalBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */; };
 		728CB4F51D742D01000DCAAA /* IconFont in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4F31D742CFB000DCAAA /* IconFont */; };
+		801EED6A1E0A8DAC0029EFA1 /* FinalBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 801EED691E0A8DAC0029EFA1 /* FinalBundle.bundle */; };
+		801EED6D1E0AA3F20029EFA1 /* Less.png in Resources */ = {isa = PBXBuildFile; fileRef = 801EED6B1E0AA3F20029EFA1 /* Less.png */; };
+		801EED6E1E0AA3F20029EFA1 /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = 801EED6C1E0AA3F20029EFA1 /* More.png */; };
 		859006871D941AB200C5539E /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 859006781D941AB200C5539E /* minus.png */; };
 		859006881D941AB200C5539E /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 859006791D941AB200C5539E /* plus.png */; };
 		8590068F1D941BB100C5539E /* MSTRCustomizations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8590068D1D941BB100C5539E /* MSTRCustomizations.plist */; };
@@ -102,7 +105,6 @@
 		A7889C6E1E0132CA00780B3A /* NSNumberExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A7889C1D1E0132C900780B3A /* NSNumberExtensions.h */; };
 		A7889C6F1E0132CA00780B3A /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7889C1E1E0132C900780B3A /* libCorePlot-CocoaTouch.a */; };
 		A7889C701E0132CA00780B3A /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7889C1F1E0132C900780B3A /* License.txt */; };
-		A7889C721E0151E700780B3A /* FinalBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7889C711E0151E700780B3A /* FinalBundle.bundle */; };
 		A7E153E91E00023D00D6DC85 /* Adage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = A7E153E61E00023D00D6DC85 /* Adage_Prefix.pch */; };
 		A7E153EA1E00023D00D6DC85 /* AdageSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E153E71E00023D00D6DC85 /* AdageSDK.h */; };
 		A7E153EB1E00023D00D6DC85 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7E153E81E00023D00D6DC85 /* Info.plist */; };
@@ -175,6 +177,9 @@
 		728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FinalBundle.bundle; path = Resources/FinalBundle.bundle; sourceTree = "<group>"; };
 		728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroStrategyMobileSDKResources.bundle; path = Resources/MicroStrategyMobileSDKResources.bundle; sourceTree = "<group>"; };
 		728CB4F31D742CFB000DCAAA /* IconFont */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IconFont; path = Resources/IconFont; sourceTree = "<group>"; };
+		801EED691E0A8DAC0029EFA1 /* FinalBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FinalBundle.bundle; sourceTree = "<group>"; };
+		801EED6B1E0AA3F20029EFA1 /* Less.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Less.png; sourceTree = "<group>"; };
+		801EED6C1E0AA3F20029EFA1 /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
 		859006781D941AB200C5539E /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		859006791D941AB200C5539E /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
 		8590068D1D941BB100C5539E /* MSTRCustomizations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MSTRCustomizations.plist; sourceTree = "<group>"; };
@@ -277,7 +282,6 @@
 		A7889C1D1E0132C900780B3A /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		A7889C1E1E0132C900780B3A /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "Custom/CorePlot/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A7889C1F1E0132C900780B3A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License.txt; path = Custom/CorePlot/License.txt; sourceTree = "<group>"; };
-		A7889C711E0151E700780B3A /* FinalBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FinalBundle.bundle; sourceTree = "<group>"; };
 		A7E153E61E00023D00D6DC85 /* Adage_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Adage_Prefix.pch; path = AdageSDK/Adage_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		A7E153E71E00023D00D6DC85 /* AdageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdageSDK.h; path = AdageSDK/AdageSDK.h; sourceTree = SOURCE_ROOT; };
 		A7E153E81E00023D00D6DC85 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AdageSDK/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -315,7 +319,7 @@
 		0B9DCACC1D2A4A0000F4DF57 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				A7889C711E0151E700780B3A /* FinalBundle.bundle */,
+				801EED691E0A8DAC0029EFA1 /* FinalBundle.bundle */,
 				A7E154911E00080000D6DC85 /* Widgets */,
 				8590068D1D941BB100C5539E /* MSTRCustomizations.plist */,
 			);
@@ -336,6 +340,8 @@
 		8590066E1D941AB200C5539E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				801EED6B1E0AA3F20029EFA1 /* Less.png */,
+				801EED6C1E0AA3F20029EFA1 /* More.png */,
 				859006781D941AB200C5539E /* minus.png */,
 				859006791D941AB200C5539E /* plus.png */,
 			);
@@ -725,8 +731,9 @@
 			files = (
 				8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */,
 				728CB4A51D74269E000DCAAA /* FinalBundle.bundle in Resources */,
+				801EED6D1E0AA3F20029EFA1 /* Less.png in Resources */,
 				8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */,
-				A7889C721E0151E700780B3A /* FinalBundle.bundle in Resources */,
+				801EED6A1E0A8DAC0029EFA1 /* FinalBundle.bundle in Resources */,
 				728CB4F51D742D01000DCAAA /* IconFont in Resources */,
 				8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */,
 				859006871D941AB200C5539E /* minus.png in Resources */,
@@ -737,6 +744,7 @@
 				8590068F1D941BB100C5539E /* MSTRCustomizations.plist in Resources */,
 				859006881D941AB200C5539E /* plus.png in Resources */,
 				A7889C701E0132CA00780B3A /* License.txt in Resources */,
+				801EED6E1E0AA3F20029EFA1 /* More.png in Resources */,
 				8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

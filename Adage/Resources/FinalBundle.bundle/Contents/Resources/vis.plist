@@ -69,5 +69,7 @@
 	</dict>
 	<key>IPadWebWidget</key>
 	<string>MSTRWebWidgetViewer</string>
+	<key>CustomControllerStyle</key>
+	<string>CustomController</string>
 </dict>
 </plist>

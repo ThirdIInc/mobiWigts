@@ -12,18 +12,17 @@
 		728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */; };
 		728CB4A51D74269E000DCAAA /* FinalBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */; };
 		728CB4F51D742D01000DCAAA /* IconFont in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4F31D742CFB000DCAAA /* IconFont */; };
-		8ED4871B1CAA25CA00DF2648 /* MSTR10_splash screen_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487091CAA253400DF2648 /* MSTR10_splash screen_iphone.png */; };
-		8ED4871C1CAA25CA00DF2648 /* MSTR10_splash screen_iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4870A1CAA253400DF2648 /* MSTR10_splash screen_iphone@2x.png */; };
-		8ED4871D1CAA25CA00DF2648 /* MSTR10_splash screen_iphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4870B1CAA253400DF2648 /* MSTR10_splash screen_iphone@3x.png */; };
-		8ED4871E1CAA25CA00DF2648 /* splash_screen_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4870C1CAA253400DF2648 /* splash_screen_icon_white.png */; };
-		8ED4871F1CAA25CA00DF2648 /* splash_screen_icon_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4870D1CAA253400DF2648 /* splash_screen_icon_white@2x.png */; };
-		8ED487201CAA25CA00DF2648 /* splash_screen_icon_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4870E1CAA253400DF2648 /* splash_screen_icon_white@3x.png */; };
 		8ED487541CAAC00300DF2648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED487501CAABFE100DF2648 /* main.m */; };
 		8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487561CAAC29300DF2648 /* Default-Landscape.png */; };
 		8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875A1CAAC2C600DF2648 /* Preferences.xml */; };
 		8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */; };
 		8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487171CAA253400DF2648 /* Settings.bundle */; };
 		8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487151CAA253400DF2648 /* Images.xcassets */; };
+		A7EB5E801E0CFC7700DAE279 /* less.png in Resources */ = {isa = PBXBuildFile; fileRef = A7EB5E7C1E0CFC7700DAE279 /* less.png */; };
+		A7EB5E811E0CFC7700DAE279 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = A7EB5E7D1E0CFC7700DAE279 /* minus.png */; };
+		A7EB5E821E0CFC7700DAE279 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = A7EB5E7E1E0CFC7700DAE279 /* more.png */; };
+		A7EB5E831E0CFC7700DAE279 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = A7EB5E7F1E0CFC7700DAE279 /* plus.png */; };
+		A7EB5E851E0D062E00DAE279 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = A7EB5E841E0D062E00DAE279 /* reset.png */; };
 		DDA364E41D2BB28C00927316 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC6ED551BA461BA007713F1 /* CoreData.framework */; };
 		DDA364E51D2BB2C500927316 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191199E41CBBA3A500156831 /* MessageUI.framework */; };
 		DDA364E61D2BB2DD00927316 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E570E1C1B90F0F400D65413 /* WebKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -78,11 +77,9 @@
 		19BE7D5C1CF30D7400F4A3DB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		19BE7D5E1CF30DA000F4A3DB /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../Library/GoogleAnalyticsServicesiOS/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		19BE7D8E1CF3E82600F4A3DB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		19BE7DB31CF3F84800F4A3DB /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Entitlements.plist; path = iPhone/Entitlements.plist; sourceTree = SOURCE_ROOT; };
 		19BE7DE11CF4376800F4A3DB /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = usr/lib/libiconv.2.tbd; sourceTree = SDKROOT; };
 		19BE7DE31CF4377100F4A3DB /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
 		19BE7DE51CF4377A00F4A3DB /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		19CE94591CC4B49400FAB70B /* Launch Screen_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen_iPhone.storyboard"; sourceTree = "<group>"; };
 		728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FinalBundle.bundle; path = Resources/FinalBundle.bundle; sourceTree = "<group>"; };
 		728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroStrategyMobileSDKResources.bundle; path = Resources/MicroStrategyMobileSDKResources.bundle; sourceTree = "<group>"; };
 		728CB4F31D742CFB000DCAAA /* IconFont */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IconFont; path = Resources/IconFont; sourceTree = "<group>"; };
@@ -100,24 +97,13 @@
 		8EC6C95C1BA3CD27007713F1 /* MicroStrategyMobileSDK_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroStrategyMobileSDK_Prefix.pch; sourceTree = "<group>"; };
 		8EC6ED551BA461BA007713F1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8EC6ED571BA46200007713F1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8ED487091CAA253400DF2648 /* MSTR10_splash screen_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MSTR10_splash screen_iphone.png"; path = "Images.xcassets/MSTR10_splash screen_iphone.png"; sourceTree = "<group>"; };
-		8ED4870A1CAA253400DF2648 /* MSTR10_splash screen_iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MSTR10_splash screen_iphone@2x.png"; path = "Images.xcassets/MSTR10_splash screen_iphone@2x.png"; sourceTree = "<group>"; };
-		8ED4870B1CAA253400DF2648 /* MSTR10_splash screen_iphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MSTR10_splash screen_iphone@3x.png"; path = "Images.xcassets/MSTR10_splash screen_iphone@3x.png"; sourceTree = "<group>"; };
-		8ED4870C1CAA253400DF2648 /* splash_screen_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_screen_icon_white.png; path = Images.xcassets/splash_screen_icon_white.png; sourceTree = "<group>"; };
-		8ED4870D1CAA253400DF2648 /* splash_screen_icon_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_screen_icon_white@2x.png"; path = "Images.xcassets/splash_screen_icon_white@2x.png"; sourceTree = "<group>"; };
-		8ED4870E1CAA253400DF2648 /* splash_screen_icon_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_screen_icon_white@3x.png"; path = "Images.xcassets/splash_screen_icon_white@3x.png"; sourceTree = "<group>"; };
 		8ED487151CAA253400DF2648 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ED487171CAA253400DF2648 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8ED487501CAABFE100DF2648 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OtherSources/main.m; sourceTree = SOURCE_ROOT; };
 		8ED487561CAAC29300DF2648 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "iPad/Default-Landscape.png"; sourceTree = SOURCE_ROOT; };
 		8ED4875A1CAAC2C600DF2648 /* Preferences.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Preferences.xml; path = iPad/Preferences.xml; sourceTree = SOURCE_ROOT; };
 		8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MainWindow-iPad.xib"; sourceTree = "<group>"; };
-		8ED4875D1CAAD70100DF2648 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		8ED487601CAADAED00DF2648 /* Info_IPad.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_IPad.plist; sourceTree = SOURCE_ROOT; };
-		8ED487611CAADAED00DF2648 /* Info_IPhone.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_IPhone.plist; sourceTree = SOURCE_ROOT; };
-		8ED487621CAADE1E00DF2648 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "iPhone/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
-		8ED487631CAADE1E00DF2648 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "iPhone/Default@2x.png"; sourceTree = SOURCE_ROOT; };
-		8ED487641CAADE1E00DF2648 /* Preferences.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Preferences.xml; path = iPhone/Preferences.xml; sourceTree = SOURCE_ROOT; };
 		A7889C741E01530700780B3A /* CustomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControl.h; sourceTree = "<group>"; };
 		A7889C751E01530700780B3A /* CustomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControl.m; sourceTree = "<group>"; };
 		A7889C761E01530700780B3A /* CustomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomController.h; sourceTree = "<group>"; };
@@ -210,6 +196,11 @@
 		A7889CDA1E01531700780B3A /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		A7889CDB1E01531700780B3A /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		A7889CDC1E01531700780B3A /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		A7EB5E7C1E0CFC7700DAE279 /* less.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = less.png; path = iPad/less.png; sourceTree = SOURCE_ROOT; };
+		A7EB5E7D1E0CFC7700DAE279 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minus.png; path = iPad/minus.png; sourceTree = SOURCE_ROOT; };
+		A7EB5E7E1E0CFC7700DAE279 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = iPad/more.png; sourceTree = SOURCE_ROOT; };
+		A7EB5E7F1E0CFC7700DAE279 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = iPad/plus.png; sourceTree = SOURCE_ROOT; };
+		A7EB5E841E0D062E00DAE279 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reset.png; path = iPad/reset.png; sourceTree = SOURCE_ROOT; };
 		D603C70D1D38BA5100480A06 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -294,10 +285,8 @@
 			isa = PBXGroup;
 			children = (
 				8ED487601CAADAED00DF2648 /* Info_IPad.plist */,
-				8ED487611CAADAED00DF2648 /* Info_IPhone.plist */,
 				8E8C944C1BCD130300D8D99A /* Supporting Files */,
 				8E8C94291BCD12E900D8D99A /* iPad */,
-				8E8C94301BCD12E900D8D99A /* iPhone */,
 			);
 			path = MicroStrategyMobile;
 			sourceTree = "<group>";
@@ -307,20 +296,14 @@
 			children = (
 				193746241CF5851800C7A378 /* Entitlements.plist */,
 				8ED487561CAAC29300DF2648 /* Default-Landscape.png */,
+				A7EB5E7C1E0CFC7700DAE279 /* less.png */,
+				A7EB5E841E0D062E00DAE279 /* reset.png */,
+				A7EB5E7D1E0CFC7700DAE279 /* minus.png */,
+				A7EB5E7E1E0CFC7700DAE279 /* more.png */,
+				A7EB5E7F1E0CFC7700DAE279 /* plus.png */,
 				8ED4875A1CAAC2C600DF2648 /* Preferences.xml */,
 			);
 			path = iPad;
-			sourceTree = "<group>";
-		};
-		8E8C94301BCD12E900D8D99A /* iPhone */ = {
-			isa = PBXGroup;
-			children = (
-				19BE7DB31CF3F84800F4A3DB /* Entitlements.plist */,
-				8ED487621CAADE1E00DF2648 /* Default-568h@2x.png */,
-				8ED487631CAADE1E00DF2648 /* Default@2x.png */,
-				8ED487641CAADE1E00DF2648 /* Preferences.xml */,
-			);
-			path = iPhone;
 			sourceTree = "<group>";
 		};
 		8E8C944C1BCD130300D8D99A /* Supporting Files */ = {
@@ -337,7 +320,6 @@
 				0B9DCACC1D2A4A0000F4DF57 /* Custom */,
 				8E8C94121BCD119D00D8D99A /* MicroStrategyMobile */,
 				8ED4875C1CAAD70100DF2648 /* MainWindow-iPad.xib */,
-				8ED4875D1CAAD70100DF2648 /* MainWindow.xib */,
 				8EC6C9141BA3CC27007713F1 /* MicroStrategyMobileSDK */,
 				8ED487081CAA252500DF2648 /* Resource */,
 				8E570E171B90F0CC00D65413 /* Frameworks */,
@@ -377,14 +359,7 @@
 				728CB4F31D742CFB000DCAAA /* IconFont */,
 				728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */,
 				728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */,
-				19CE94591CC4B49400FAB70B /* Launch Screen_iPhone.storyboard */,
 				191199FD1CBBAA1700156831 /* Launch Screen.storyboard */,
-				8ED487091CAA253400DF2648 /* MSTR10_splash screen_iphone.png */,
-				8ED4870A1CAA253400DF2648 /* MSTR10_splash screen_iphone@2x.png */,
-				8ED4870B1CAA253400DF2648 /* MSTR10_splash screen_iphone@3x.png */,
-				8ED4870C1CAA253400DF2648 /* splash_screen_icon_white.png */,
-				8ED4870D1CAA253400DF2648 /* splash_screen_icon_white@2x.png */,
-				8ED4870E1CAA253400DF2648 /* splash_screen_icon_white@3x.png */,
 				8ED487151CAA253400DF2648 /* Images.xcassets */,
 				8ED487171CAA253400DF2648 /* Settings.bundle */,
 			);
@@ -577,19 +552,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED4875E1CAAD70600DF2648 /* MainWindow-iPad.xib in Resources */,
-				8ED4871C1CAA25CA00DF2648 /* MSTR10_splash screen_iphone@2x.png in Resources */,
 				728CB4A51D74269E000DCAAA /* FinalBundle.bundle in Resources */,
-				8ED4871B1CAA25CA00DF2648 /* MSTR10_splash screen_iphone.png in Resources */,
-				8ED4871E1CAA25CA00DF2648 /* splash_screen_icon_white.png in Resources */,
 				8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */,
-				8ED487201CAA25CA00DF2648 /* splash_screen_icon_white@3x.png in Resources */,
+				A7EB5E851E0D062E00DAE279 /* reset.png in Resources */,
 				728CB4F51D742D01000DCAAA /* IconFont in Resources */,
+				A7EB5E811E0CFC7700DAE279 /* minus.png in Resources */,
 				8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */,
-				8ED4871F1CAA25CA00DF2648 /* splash_screen_icon_white@2x.png in Resources */,
+				A7EB5E831E0CFC7700DAE279 /* plus.png in Resources */,
 				728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */,
 				8ED487711CAAE01000DF2648 /* Images.xcassets in Resources */,
+				A7EB5E801E0CFC7700DAE279 /* less.png in Resources */,
 				8ED4876C1CAADFFE00DF2648 /* Settings.bundle in Resources */,
-				8ED4871D1CAA25CA00DF2648 /* MSTR10_splash screen_iphone@3x.png in Resources */,
+				A7EB5E821E0CFC7700DAE279 /* more.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +652,7 @@
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,7 +699,7 @@
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS";
 				OTHER_CODE_SIGN_FLAGS = "";
@@ -768,7 +742,7 @@
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS";
 				OTHER_CODE_SIGN_FLAGS = "";
@@ -809,7 +783,7 @@
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info_IPad.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../Library/GoogleAnalyticsServicesiOS";
 				OTHER_CODE_SIGN_FLAGS = "";
@@ -887,7 +861,7 @@
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -966,7 +940,7 @@
 					"${SDKROOT}/usr/include/libxml2/**",
 					"$(PROJECT_DIR)/../Library/openssl/include/**",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

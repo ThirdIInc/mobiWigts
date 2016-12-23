@@ -86,20 +86,19 @@
 
 -(void)readData {
 	
+	MSIHeaderValue *metricCell = [[MSIHeaderValue alloc] init];
+	NSMutableArray *row = [[NSMutableArray alloc] init];
+	
 	// Keep a reference to the grid's data.
 	self.modelData = (MSIModelData *)[widgetHelper dataProvider];
 	
 	NSMutableArray *current = self.modelData.metricHeaderArray;
-	MSIMetricHeader *metricHeader =[current objectAtIndex:0];
-	
-	// Always expect first metric header to be the unique identifier for the panel / control grid.
-	NSMutableArray *row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:0];
-	MSIHeaderValue *metricCell = [row objectAtIndex:0];
+	MSIMetricHeader *metricHeader = [current objectAtIndex:0];
 	
 	supportingMetrics = [[NSMutableDictionary alloc]init];
 	
-	// Always expect second metric to be the number of controls.
-	MSIMetricValue *metricValue = [metricHeader.elements objectAtIndex:1];
+	// Always expect first metric to be the number of controls.
+	MSIMetricValue *metricValue = [metricHeader.elements objectAtIndex:0];
 	noOfControls = [metricValue.rawValue intValue];
 	
 	int rowID = 0;
@@ -108,7 +107,7 @@
 		for (int i = 0; i < noOfControls; i++) {
 			
 			// To get control details from grid.
-			rowID = 2 + (8 * i);
+			rowID = 1 + (5 * i);
 			
 			CustomControl *control = [[CustomControl alloc] init];
 			
@@ -153,8 +152,22 @@
 			// Tertiary color for the control and its label.
 			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
 			
+			//comma separated values for (min, max, step, pos-x, pos-y, width, height)*************
+			NSString *strValues = [[metricHeader.elements objectAtIndex:rowID+3] rawValue];
+			NSArray *arrValues = [strValues componentsSeparatedByString:@","];
+			
 			// Minimum value that the control can have.
-			control.min = [[[metricHeader.elements objectAtIndex:rowID+3] rawValue] intValue];
+			control.min = [[arrValues objectAtIndex:0] intValue];
+			
+			// Maximum value that the control can have.
+			control.max = [[arrValues objectAtIndex:1] intValue];
+			
+			// Lowest value by which the control can incerement/decrement it's value. Only applicable to sliders.
+			control.step = [[arrValues objectAtIndex:2] intValue];
+			
+			// Position of the control on the screen.
+			// Format is "x,y,width,height". It is relative to the grid position in the document.
+			control.position = [NSString stringWithFormat:@"%i,%i,%i,%i",[[arrValues objectAtIndex:3] intValue],[[arrValues objectAtIndex:4] intValue],[[arrValues objectAtIndex:5] intValue],[[arrValues objectAtIndex:6] intValue]];
 			
 			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID+3];
 			metricProperties = [row objectAtIndex:1];
@@ -163,25 +176,12 @@
 			// Additional color for the control and its label.
 			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
 			
-			// Maximum value that the control can have.
-			control.max = [[[metricHeader.elements objectAtIndex:rowID+4] rawValue] intValue];
-			
-			// Lowest value by which the control can incerement/decrement it's value. Only applicable to sliders.
-			control.step = [[[metricHeader.elements objectAtIndex:rowID+5] rawValue] intValue];
-			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID+5];
-			metricProperties = [row objectAtIndex:1];
-			propertyGroup = metricProperties.format;
-			
 			// Horizontal aligment for the control's label.
 			control.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment propertyID:AlignmentFormattingHorizontal] intValue];
 			
 			// Suffix for the control's label.
-			control.suffix = [[metricHeader.elements objectAtIndex:rowID+6] rawValue];
+			control.suffix = [[metricHeader.elements objectAtIndex:rowID+4] rawValue];
 			
-			// Position of the control on the screen.
-			// Format is "x,y,width,height". It is relative to the grid position in the document.
-			control.position = [[metricHeader.elements objectAtIndex:rowID+7] rawValue];
 			[self setDefaultValues:control];
 			[customControls addObject:control];
 			
@@ -189,7 +189,7 @@
 		
 	}
 	
-	rowID = 2 + (8 * noOfControls);
+	rowID = 1 + (5 * noOfControls);
 	
 	// Always expect this metric to be the number of dynamic labels.
 	metricValue = [metricHeader.elements objectAtIndex:rowID];
@@ -200,13 +200,13 @@
 		for (int i = 0; i < noOfLabels; i++) {
 			
 			// To get dynamic label details from grid.
-			rowID = 3 + (8 * noOfControls) + (2 * i);
+			rowID = 2 + (5 * noOfControls) + (2 * i);
 			
 			CustomLabel *label = [[CustomLabel alloc]init];
 			
 			// Gets the header value of the dynamic label.
 			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID];
-			metricCell = [row objectAtIndex:0];
+		  metricCell = [row objectAtIndex:0];
 			label.key = [[NSString alloc]initWithFormat:@"%@",metricCell.headerValue];
 			
 			// Gets the formula used to dynamically evaluate the value of dynamic label.
@@ -247,7 +247,7 @@
 	// Sets the index to the row containing the first supporting/base metric.
 	if (noOfControls > 0) {
 		
-		rowID = 3 + (8 * noOfControls) + (2 * noOfLabels);
+		rowID = 2 + (5 * noOfControls) + (2 * noOfLabels);
 		
 	}
 	
@@ -601,6 +601,7 @@
 			}
 			
 			lblTarget.text = [self setNumberFormat:sliderVal withCategory:control.category withFormat:control.format];
+			//lblTarget.text = [NSString stringWithFormat:@"%@ %@",lblTarget.text,control.suffix];
 			
 			[GoldmineReader setValue:sliderVal forKey:control.uid];
 			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:sliderVal] forKey:control.uid];
@@ -690,7 +691,9 @@
 	
 	for(CustomControl *control in customControls){
 		if ([control.uid isEqualToString:[[@(less.tag) stringValue] stringByReplacingOccurrencesOfString:@"101" withString:@"LessMore"]]) {
-			
+			int lblValue = [less.text intValue];
+			lblValue -= control.step;
+			less.text = [NSString stringWithFormat:@"%i", lblValue];
 			break;
 			
 		}
@@ -717,7 +720,9 @@
 	
 	for(CustomControl *control in customControls){
 		if ([control.uid isEqualToString:[[@(more.tag) stringValue] stringByReplacingOccurrencesOfString:@"101" withString:@"LessMore"]]) {
-			
+			int lblValue = [more.text intValue];
+			lblValue += control.step;
+			more.text = [NSString stringWithFormat:@"%i", lblValue];
 			break;
 			
 		}

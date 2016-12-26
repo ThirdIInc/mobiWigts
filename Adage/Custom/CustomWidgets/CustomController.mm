@@ -389,39 +389,8 @@
 	
 	UIView *slider = [[UIView alloc] initWithFrame:frame];
 	
-	CGRect frameLabel = CGRectMake(0, 0, frame.size.width, 20);
-	UILabel *lblValue = [[UILabel alloc] initWithFrame:frameLabel];
-	
-	// Tags the label object for reference and updating the value in event handlers.
-	lblValue.tag = [[control.uid stringByReplacingOccurrencesOfString:@"Slider" withString:@"909"] integerValue];
-	lblValue.font = [UIFont fontWithName:control.fFace size:control.fSize];
-	
-	lblValue.text = [self setNumberFormat:[[GoldmineReader getValue] valueForKey:control.uid] withCategory:control.category withFormat:control.format];
-	lblValue.text = [NSString stringWithFormat:@"%@ %@",lblValue.text,control.suffix];
-	
-	// Horizontal alignment for the control's label.
-	switch (control.align) {
-			
-		case 4:
-			lblValue.textAlignment = NSTextAlignmentRight;
-			break;
-		case 3:
-			lblValue.textAlignment = NSTextAlignmentCenter;
-			break;
-		default:
-			lblValue.textAlignment = NSTextAlignmentLeft;
-			break;
-			
-	}
-	
-	// This color is set on the minimum value para-metric
-	lblValue.textColor = [control.colors objectAtIndex:3];
-	lblValue.numberOfLines = 0;
-	lblValue.lineBreakMode = NSLineBreakByWordWrapping;
-	[slider addSubview:lblValue];
-	
 	UIButton *btnMinus = [UIButton buttonWithType:UIButtonTypeCustom];
-	CGRect frameMinusButton = CGRectMake(0, frame.size.height-35, 25, 25);
+	CGRect frameMinusButton = CGRectMake(0, 0, frame.size.height, frame.size.height);
 	btnMinus.frame = frameMinusButton;
 	[btnMinus setTitle:@"" forState:UIControlStateNormal];
 	btnMinus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
@@ -431,7 +400,7 @@
 	[btnMinus setBackgroundImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
 	[slider addSubview:btnMinus];
 	
-	CGRect frameSlider = CGRectMake(35, frame.size.height-35, frame.size.width-70, 25);
+	CGRect frameSlider = CGRectMake(frame.size.height+5, 0, frame.size.width-(frame.size.height*2+10), frame.size.height);
 	
 	UISlider *sliderControl = [[UISlider alloc] init];
 	sliderControl.frame = frameSlider;
@@ -439,16 +408,18 @@
 	sliderControl.minimumValue = control.min;
 	sliderControl.maximumValue = control.max;
 	
-	sliderControl.value = [lblValue.text floatValue];
+	sliderControl.value = [[[GoldmineReader getValue] valueForKey:control.uid] floatValue];
 	
 	sliderControl.continuous = YES;
-	sliderControl.minimumTrackTintColor = [control.colors objectAtIndex:0];
+	sliderControl.minimumTrackTintColor = [control.colors objectAtIndex:1];
 	sliderControl.maximumTrackTintColor = [control.colors objectAtIndex:2];
+	
+	sliderControl.thumbTintColor = [control.colors objectAtIndex:0];
 	
 	[sliderControl addTarget:self action:@selector(handleSlider:) forControlEvents:UIControlEventValueChanged];
 	[slider addSubview:sliderControl];
 	
-	CGRect framePlusButton = CGRectMake(frame.size.width-25, frame.size.height-35, 25, 25);
+	CGRect framePlusButton = CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height);
 	UIButton *btnPlus = [UIButton buttonWithType:UIButtonTypeCustom];
 	btnPlus.frame = framePlusButton;
 	[btnPlus setTitle:@"" forState:UIControlStateNormal];
@@ -466,7 +437,7 @@
 	
 	UIView *lessMore = [[UIView alloc] initWithFrame:frame];
 	
-	CGRect frameLabel = CGRectMake(25, 0, frame.size.width-25, frame.size.height);
+	CGRect frameLabel = CGRectMake(frame.size.height, 0, frame.size.width-(frame.size.height*2), frame.size.height);
 	UILabel *lblValue = [[UILabel alloc] initWithFrame:frameLabel];
 	
 	// Tags the label object for reference and updating the value in event handlers.
@@ -475,21 +446,7 @@
 	
 	lblValue.text = [self setNumberFormat:[[GoldmineReader getValue] valueForKey:control.uid] withCategory:control.category withFormat:control.format];
 	lblValue.text = [NSString stringWithFormat:@"%@ %@",lblValue.text,control.suffix];
-	
-	// Horizontal alignment for the control's label.
-	switch (control.align) {
-			
-		case 4:
-			lblValue.textAlignment = NSTextAlignmentRight;
-			break;
-		case 3:
-			lblValue.textAlignment = NSTextAlignmentCenter;
-			break;
-		default:
-			lblValue.textAlignment = NSTextAlignmentLeft;
-			break;
-			
-	}
+	lblValue.textAlignment = NSTextAlignmentCenter;
 	
 	// This color is set on the minimum value para-metric
 	lblValue.textColor = [control.colors objectAtIndex:3];
@@ -498,7 +455,7 @@
 	[lessMore addSubview:lblValue];
 	
 	UIButton *btnMinus = [UIButton buttonWithType:UIButtonTypeCustom];
-	CGRect frameMinusButton = CGRectMake(0, 0, 25, 25);
+	CGRect frameMinusButton = CGRectMake(0, 0, frame.size.height, frame.size.height);
 	btnMinus.frame = frameMinusButton;
 	[btnMinus setTitle:@"" forState:UIControlStateNormal];
 	btnMinus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
@@ -508,7 +465,7 @@
 	[btnMinus setBackgroundImage:[UIImage imageNamed:@"less.png"] forState:UIControlStateNormal];
 	[lessMore addSubview:btnMinus];
 	
-	CGRect framePlusButton = CGRectMake(frame.size.width-25, 0, 25, 25);
+	CGRect framePlusButton = CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height);
 	UIButton *btnPlus = [UIButton buttonWithType:UIButtonTypeCustom];
 	btnPlus.frame = framePlusButton;
 	[btnPlus setTitle:@"" forState:UIControlStateNormal];
@@ -548,8 +505,6 @@
 	for(CustomControl *control in customControls) {
 		
 		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999" withString:@"Slider"]]) {
-			
-			UILabel *lblTarget = (UILabel *)[self viewWithTag:[[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999" withString:@"909"] integerValue]];
 			
 			// 909 is tag for Slider Label
 			if ([control.suffix isEqualToString:@"%"]) {
@@ -599,9 +554,6 @@
 				}
 				
 			}
-			
-			lblTarget.text = [self setNumberFormat:sliderVal withCategory:control.category withFormat:control.format];
-			//lblTarget.text = [NSString stringWithFormat:@"%@ %@",lblTarget.text,control.suffix];
 			
 			[GoldmineReader setValue:sliderVal forKey:control.uid];
 			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:sliderVal] forKey:control.uid];

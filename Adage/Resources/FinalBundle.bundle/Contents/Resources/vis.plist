@@ -4,6 +4,8 @@
 <dict>
 	<key>IOSVideoPlayerStyle</key>
 	<string>VideoWidgetViewer</string>
+	<key>CustomControllerStyle</key>
+	<string>CustomController</string>
 	<key>IPadDatePickerStyle</key>
 	<string>MSICalendarWidgetViewer</string>
 	<key>IPadGraphMatrix2Style</key>

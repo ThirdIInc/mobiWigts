@@ -6,8 +6,6 @@
 	<string>VideoWidgetViewer</string>
 	<key>CustomControllerStyle</key>
 	<string>CustomController</string>
-	<key>GraphHStyle</key>
-	<string>GraphH</string>
 	<key>IPadDatePickerStyle</key>
 	<string>MSICalendarWidgetViewer</string>
 	<key>IPadGraphMatrix2Style</key>

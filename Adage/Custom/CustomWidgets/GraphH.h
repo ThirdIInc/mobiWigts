@@ -12,18 +12,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "MicroStrategyMobileSDK/MSIWidgetViewer.h"
-#import "MicroStrategyMobileSDK/MSIWidgetHelper.h"
-#import "MicroStrategyMobileSDK/MSIPropertyGroup.h"
-#import "MicroStrategyMobileSDK/MSIHeaderValue.h"
-#import "MicroStrategyMobileSDK/MetricHeader.h"
-#import "MicroStrategyMobileSDK/MetricValue.h"
+#import <MicroStrategyMobileSDK/MSIWidgetViewer.h>
+#import <MicroStrategyMobileSDK/MSIWidgetHelper.h>
+#import <MicroStrategyMobileSDK/MSIPropertyGroup.h>
+#import <MicroStrategyMobileSDK/MSIHeaderValue.h>
+#import <MicroStrategyMobileSDK/MetricHeader.h>
+#import <MicroStrategyMobileSDK/MetricValue.h>
 
 #import "BarPlotH.h"
 #import "GoldmineReader.h"
 #import "EvaluateFormulae.h"
 
-@interface GraphH : MSIWidgetViewer{
+@interface GraphH : MSIWidgetViewer {
+	
 	EvaluateFormulae *objEvaluateFormulae;
 	CPTGraphHostingView *barHostView;
 	BarPlotH *barGraph;
@@ -35,8 +36,10 @@
 	
 	//Data dictionary to hold supporting metrics
 	NSMutableDictionary *dictSupportingMetrics;
+	
 }
-@property (retain,nonatomic) MSIModelData *modelData;
+
+@property (retain, nonatomic) MSIModelData *modelData;
 
 -(void)readDataValues;
 -(void)readConstants;
@@ -44,7 +47,11 @@
 -(void)readFormattingInfo;
 
 -(UIView *)renderWidgetContainer:(CGRect)frameRect;
--(UILabel *)createLableWithFrame:(CGRect)frmLabel text:(NSString *)txtLabel textColor:(UIColor *)clrLabel font:(UIFont *)fLabel align:(NSTextAlignment)txtAlignment;
+-(UILabel *)createLableWithFrame:(CGRect)frmLabel
+														text:(NSString *)txtLabel
+											 textColor:(UIColor *)clrLabel
+														font:(UIFont *)fLabel
+													 align:(NSTextAlignment)txtAlignment;
 
 @end
 

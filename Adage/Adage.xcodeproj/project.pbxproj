@@ -32,7 +32,6 @@
 		A766C6AC1E11128A0090F7A3 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = A766C6A71E11128A0090F7A3 /* more.png */; };
 		A766C6AD1E11128A0090F7A3 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = A766C6A81E11128A0090F7A3 /* plus.png */; };
 		A766C6AE1E11128A0090F7A3 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = A766C6A91E11128A0090F7A3 /* reset.png */; };
-		A766C6AF1E11169F0090F7A3 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A766C6A11E1106580090F7A3 /* CorePlot.framework */; };
 		A766C6B01E11169F0090F7A3 /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A766C6A11E1106580090F7A3 /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A7E153E91E00023D00D6DC85 /* Adage_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = A7E153E61E00023D00D6DC85 /* Adage_Prefix.pch */; };
 		A7E153EA1E00023D00D6DC85 /* AdageSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E153E71E00023D00D6DC85 /* AdageSDK.h */; };
@@ -166,7 +165,6 @@
 			files = (
 				A766C6A21E1106580090F7A3 /* CorePlot.framework in Frameworks */,
 				DDA364E71D2BB39600927316 /* libc++.tbd in Frameworks */,
-				A766C6AF1E11169F0090F7A3 /* CorePlot.framework in Frameworks */,
 				DDA364E61D2BB2DD00927316 /* WebKit.framework in Frameworks */,
 				DDA364E51D2BB2C500927316 /* MessageUI.framework in Frameworks */,
 				DDA364E41D2BB28C00927316 /* CoreData.framework in Frameworks */,
@@ -412,7 +410,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Third I, Inc.";
 				TargetAttributes = {
 					8E8C944D1BCD136600D8D99A = {

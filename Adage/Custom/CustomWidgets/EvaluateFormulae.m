@@ -10,16 +10,21 @@
 
 @implementation EvaluateFormulae
 
-- (instancetype)init {
+-(instancetype)init {
+	
 	self = [super init];
+	
 	if (self) {
+		
 	}
+	
 	return self;
+	
 }
 
 //  This function evaluates formula using NSPredicate and NSExperssion method. It gets all variables values in formula from a dictionary.
-- (NSDecimalNumber *)evaluateFormula:(NSString *)formula
-												 withMetrics:(NSDictionary *)metrics; {
+-(NSDecimalNumber *)evaluateFormula:(NSString *)formula
+												withMetrics:(NSDictionary *)metrics; {
 	NSDecimalNumber *evaluatedValue;
 	
 	formula = [formula stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];

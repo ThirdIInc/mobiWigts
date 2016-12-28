@@ -42,6 +42,7 @@
 		A7E154B41E002EF100D6DC85 /* GoldmineReader.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E154A01E0009B500D6DC85 /* GoldmineReader.h */; };
 		A7E154B51E002EF100D6DC85 /* GoldmineReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E154A11E0009B500D6DC85 /* GoldmineReader.m */; };
 		A7E154B61E002EF100D6DC85 /* VariableGoldmine.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7E154921E00085200D6DC85 /* VariableGoldmine.plist */; };
+		A7E51AA71E12A2D3005C29D4 /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E51AA61E12A2D3005C29D4 /* sliderThumb.png */; };
 		DDA364E41D2BB28C00927316 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC6ED551BA461BA007713F1 /* CoreData.framework */; };
 		DDA364E51D2BB2C500927316 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191199E41CBBA3A500156831 /* MessageUI.framework */; };
 		DDA364E61D2BB2DD00927316 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E570E1C1B90F0F400D65413 /* WebKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -142,6 +143,7 @@
 		A7E154A11E0009B500D6DC85 /* GoldmineReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoldmineReader.m; path = CustomWidgets/GoldmineReader.m; sourceTree = "<group>"; };
 		A7E154A41E000A2500D6DC85 /* CustomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomController.h; path = CustomWidgets/CustomController.h; sourceTree = "<group>"; };
 		A7E154A51E000A2500D6DC85 /* CustomController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomController.mm; path = CustomWidgets/CustomController.mm; sourceTree = "<group>"; };
+		A7E51AA61E12A2D3005C29D4 /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		D603C70D1D38BA5100480A06 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -187,6 +189,7 @@
 		8590066E1D941AB200C5539E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A7E51AA61E12A2D3005C29D4 /* sliderThumb.png */,
 				A766C6A51E11128A0090F7A3 /* less.png */,
 				A766C6A61E11128A0090F7A3 /* minus.png */,
 				A766C6A71E11128A0090F7A3 /* more.png */,
@@ -426,6 +429,7 @@
 				A766C6AA1E11128A0090F7A3 /* less.png in Resources */,
 				A766C6A01E1104D90090F7A3 /* License.txt in Resources */,
 				8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */,
+				A7E51AA71E12A2D3005C29D4 /* sliderThumb.png in Resources */,
 				728CB4F51D742D01000DCAAA /* IconFont in Resources */,
 				8ED4875B1CAAC2C600DF2648 /* Preferences.xml in Resources */,
 				A766C6AB1E11128A0090F7A3 /* minus.png in Resources */,

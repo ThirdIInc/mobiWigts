@@ -11,9 +11,12 @@
 @implementation CustomController
 
 //  This is the initialization method of the widget. It is called only once, when MicroStrategy Mobile creates the widget the first time a document is rendered (i.e., it is not called when a user changes a selector in the document). This method should include the code to perform any initialization tasks that need to be done only once, such as initializing variables and preparing external data.
--(id)initViewer:(ViewerDataModel*)_viewerDataModel withCommanderDelegate:(id<MSICommanderDelegate>)_commander withProps:(NSString*)_props {
+-(id)initViewer:(ViewerDataModel*)_viewerDataModel withCommanderDelegate:(id<MSICommanderDelegate>)_commander
+			withProps:(NSString*)_props {
 	
-	self = [super initViewer:_viewerDataModel withCommanderDelegate:_commander withProps:_props];
+	self = [super initViewer:_viewerDataModel
+		 withCommanderDelegate:_commander
+								 withProps:_props];
 	
 	if(self) {
 		
@@ -61,9 +64,10 @@
 		CGRect frame = CGRectMake([[position firstObject] floatValue], [[position objectAtIndex:1] floatValue], [[position objectAtIndex:2] floatValue], [[position lastObject] floatValue]);
 		
 		// -999<i> is tag for Dynamic label.
-		int tag = [[NSString stringWithFormat:@"%@%d",@"-999",i] intValue];
+		int tag = [[NSString stringWithFormat:@"%@%d", @"-999", i] intValue];
 		
-		[self addSubview:[label initializeLabel:frame withTag:tag]];
+		[self addSubview:[label initializeLabel:frame
+																		withTag:tag]];
 		
 		i++;
 	}
@@ -114,70 +118,83 @@
 			// This variable stores the unique ID of the control.
 			control.uid = [[metricHeader.elements objectAtIndex:rowID] rawValue];
 			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID];
 			MSIMetricValue *metricProperties = [row objectAtIndex:1];
 			MSIPropertyGroup *propertyGroup = metricProperties.format;
 			
 			// These variables store font face and font size for the control labels.
-			control.fFace = [propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingName];
-			control.fSize = [[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingSize] intValue];
+			control.fFace = [propertyGroup propertyByPropertySetID:FormattingFont
+																									propertyID:FontFormattingName];
+			control.fSize = [[propertyGroup propertyByPropertySetID:FormattingFont
+																									 propertyID:FontFormattingSize] intValue];
 			
 			control.colors = [[NSMutableArray alloc] init];
 			
 			// Primary color for the control and its label.
-			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
+			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																								 propertyID:FontFormattingColor]]];
 			
 			// Used to identify the type of control.
 			// 1 = Slider, 2 = LessMore, 3 = Reset.
-			control.type = [[[metricHeader.elements objectAtIndex:rowID+1] rawValue] intValue];
+			control.type = [[[metricHeader.elements objectAtIndex:rowID + 1] rawValue] intValue];
 			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID+1];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID + 1];
 			metricProperties = [row objectAtIndex:1];
 			propertyGroup = metricProperties.getFormat;
 			
 			// Secondary color for the control and its label.
-			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
+			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																								 propertyID:FontFormattingColor]]];
 			
 			// Default value of the control.
-			control.defaultCV = [[metricHeader.elements objectAtIndex:rowID+2] rawValue];
+			control.defaultCV = [[metricHeader.elements objectAtIndex:rowID + 2] rawValue];
 			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID+2];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID + 2];
 			metricProperties = [row objectAtIndex:1];
 			propertyGroup = metricProperties.format;
 			
 			// Number format and category for the control values and its label.
-			control.category = [[propertyGroup propertyByPropertySetID:FormattingNumber propertyID:NumberFormattingCategory] intValue];
-			control.format = [propertyGroup propertyByPropertySetID:FormattingNumber propertyID:NumberFormattingFormat];
+			control.category = [[propertyGroup propertyByPropertySetID:FormattingNumber
+																											propertyID:NumberFormattingCategory] intValue];
+			control.format = [propertyGroup propertyByPropertySetID:FormattingNumber
+																									 propertyID:NumberFormattingFormat];
 			
 			// Tertiary color for the control and its label.
-			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
+			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																								 propertyID:FontFormattingColor]]];
 			
 			//comma separated values for (min, max, step, pos-x, pos-y, width, height)*************
-			NSString *strValues = [[metricHeader.elements objectAtIndex:rowID+3] rawValue];
+			NSString *strValues = [[metricHeader.elements objectAtIndex:rowID + 3] rawValue];
 			NSArray *arrValues = [strValues componentsSeparatedByString:@","];
 			
 			// Minimum value that the control can have.
-			control.min = [[arrValues objectAtIndex:0] intValue];
+			control.min = [[arrValues objectAtIndex:0] doubleValue];
 			
 			// Maximum value that the control can have.
-			control.max = [[arrValues objectAtIndex:1] intValue];
+			control.max = [[arrValues objectAtIndex:1] doubleValue];
 			
 			// Lowest value by which the control can incerement/decrement it's value. Only applicable to sliders.
-			control.step = [[arrValues objectAtIndex:2] intValue];
+			control.step = [[arrValues objectAtIndex:2] doubleValue];
 			
 			// Position of the control on the screen.
 			// Format is "x,y,width,height". It is relative to the grid position in the document.
-			control.position = [NSString stringWithFormat:@"%i,%i,%i,%i",[[arrValues objectAtIndex:3] intValue],[[arrValues objectAtIndex:4] intValue],[[arrValues objectAtIndex:5] intValue],[[arrValues objectAtIndex:6] intValue]];
+			control.position = [NSString stringWithFormat:@"%i,%i,%i,%i", [[arrValues objectAtIndex:3] intValue], [[arrValues objectAtIndex:4] intValue], [[arrValues objectAtIndex:5] intValue], [[arrValues objectAtIndex:6] intValue]];
 			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID+3];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID + 3];
 			metricProperties = [row objectAtIndex:1];
 			propertyGroup = metricProperties.format;
 			
 			// Additional color for the control and its label.
-			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]]];
+			[control.colors addObject:[self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																								 propertyID:FontFormattingColor]]];
 			
 			// Horizontal aligment for the control's label.
-			control.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment propertyID:AlignmentFormattingHorizontal] intValue];
+			control.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment
+																									 propertyID:AlignmentFormattingHorizontal] intValue];
 			
 			// Suffix for the control's label.
 			control.suffix = [[metricHeader.elements objectAtIndex:rowID+4] rawValue];
@@ -205,39 +222,52 @@
 			CustomLabel *label = [[CustomLabel alloc]init];
 			
 			// Gets the header value of the dynamic label.
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID];
 		  metricCell = [row objectAtIndex:0];
-			label.key = [[NSString alloc]initWithFormat:@"%@",metricCell.headerValue];
+			label.key = [[NSString alloc]initWithFormat:@"%@", metricCell.headerValue];
 			
 			// Gets the formula used to dynamically evaluate the value of dynamic label.
 			label.formula = [[metricHeader.elements objectAtIndex:rowID] rawValue];
 			
-			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:rowID];
+			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																												 andRowIndex:rowID];
 			MSIMetricValue *metricProperties = [row objectAtIndex:1];
 			MSIPropertyGroup *propertyGroup = metricProperties.format;
 			
 			// Font parameters for the dynamic label.
-			label.fFace = [propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingName];
+			label.fFace = [propertyGroup propertyByPropertySetID:FormattingFont
+																								propertyID:FontFormattingName];
 			
-			label.fBold = [[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingBold] intValue];
-			label.fItalic = [[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingItalic] intValue];
-			label.fUnderline = [[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingUnderline] intValue];
+			label.fBold = [[propertyGroup propertyByPropertySetID:FormattingFont
+																								 propertyID:FontFormattingBold] intValue];
+			label.fItalic = [[propertyGroup propertyByPropertySetID:FormattingFont
+																									 propertyID:FontFormattingItalic] intValue];
+			label.fUnderline = [[propertyGroup propertyByPropertySetID:FormattingFont
+																											propertyID:FontFormattingUnderline] intValue];
 			
-			label.fSize = [[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingSize] intValue];
-			label.fColor = [self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont propertyID:FontFormattingColor]];
+			label.fSize = [[propertyGroup propertyByPropertySetID:FormattingFont
+																								 propertyID:FontFormattingSize] intValue];
+			label.fColor = [self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																			propertyID:FontFormattingColor]];
 			
 			// Horizontal alignment parameters for the dynamic label.
-			label.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment propertyID:AlignmentFormattingHorizontal] intValue];
-			label.wrap = [[propertyGroup propertyByPropertySetID:FormattingAlignment propertyID:AlignmentFormattingTextWrap] intValue];
+			label.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment
+																								 propertyID:AlignmentFormattingHorizontal] intValue];
+			label.wrap = [[propertyGroup propertyByPropertySetID:FormattingAlignment
+																								propertyID:AlignmentFormattingTextWrap] intValue];
 			
 			// Number formatting parameters for the dynamic label.
-			label.category = [[propertyGroup propertyByPropertySetID:FormattingNumber propertyID:NumberFormattingCategory] intValue];
-			label.format = [propertyGroup propertyByPropertySetID:FormattingNumber propertyID:NumberFormattingFormat];
-			label.format = [label.format stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+			label.category = [[propertyGroup propertyByPropertySetID:FormattingNumber
+																										propertyID:NumberFormattingCategory] intValue];
+			label.format = [propertyGroup propertyByPropertySetID:FormattingNumber
+																								 propertyID:NumberFormattingFormat];
+			label.format = [label.format stringByReplacingOccurrencesOfString:@"\""
+																														 withString:@""];
 			
 			// Position of the dynamic label on the screen.
 			// Format is "x,y,width,height". It is relative to the grid position in the document.
-			label.position = [[metricHeader.elements objectAtIndex:rowID+1] rawValue];
+			label.position = [[metricHeader.elements objectAtIndex:rowID + 1] rawValue];
 			[customLabels addObject:label];
 			
 		}
@@ -254,16 +284,18 @@
 	for (NSString *strKey in [[GoldmineReader getValue] allKeys]) {
 		
 		NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
-		NSNumber *number = [f numberFromString:[NSString stringWithFormat:@"%@",[[GoldmineReader getValue] valueForKey:strKey]]];
+		NSNumber *number = [f numberFromString:[NSString stringWithFormat:@"%@", [[GoldmineReader getValue] valueForKey:strKey]]];
 		
 		if (number!=nil) {
 			
-			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",[[GoldmineReader getValue] valueForKey:strKey]]] forKey:strKey];
+			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@", [[GoldmineReader getValue] valueForKey:strKey]]]
+													 forKey:strKey];
 			
 		}
 		else {
 			
-			[supportingMetrics setValue:[NSString stringWithFormat:@"%@",[[GoldmineReader getValue] valueForKey:strKey]] forKey:strKey];
+			[supportingMetrics setValue:[NSString stringWithFormat:@"%@", [[GoldmineReader getValue] valueForKey:strKey]]
+													 forKey:strKey];
 			
 		}
 		
@@ -274,7 +306,8 @@
 	// Loop through all the supporting metrics and add to the key-value pair to metrics dictionary.
 	for(int i = rowID; i < current.count; i++) {
 		
-		row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS andRowIndex:i];
+		row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
+																											 andRowIndex:i];
 		
 		//Number of columns in grid
 		metricCell = [row objectAtIndex:0];
@@ -292,20 +325,22 @@
 			for (int j = 1; j < row.count; j++) {
 				
 				MSIMetricValue *metricVal = [row objectAtIndex:j];
-				fMetricAvg = [fMetricAvg decimalNumberByAdding:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",metricVal.rawValue]]];
+				fMetricAvg = [fMetricAvg decimalNumberByAdding:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@", metricVal.rawValue]]];
 				
 			}
 			
-			fMetricAvg = [fMetricAvg decimalNumberByDividingBy:[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%lu",(unsigned long)row.count]] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:@"1"]]];
+			fMetricAvg = [fMetricAvg decimalNumberByDividingBy:[[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%lu", (unsigned long)row.count]] decimalNumberBySubtracting:[NSDecimalNumber decimalNumberWithString:@"1"]]];
 			
 			if (number != nil) {
 				
-				[supportingMetrics setValue:fMetricAvg forKey:metricKey];
+				[supportingMetrics setValue:fMetricAvg
+														 forKey:metricKey];
 				
 			}
 			else {
 				
-				[supportingMetrics setValue:metricValue.rawValue forKey:metricKey];
+				[supportingMetrics setValue:metricValue.rawValue
+														 forKey:metricKey];
 				
 			}
 			
@@ -314,12 +349,14 @@
 			
 			if (number != nil) {
 				
-				[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@",metricValue.rawValue]] forKey:metricKey];
+				[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%@", metricValue.rawValue]]
+														 forKey:metricKey];
 				
 			}
 			else {
 				
-				[supportingMetrics setValue:metricValue.rawValue forKey:metricKey];
+				[supportingMetrics setValue:metricValue.rawValue
+														 forKey:metricKey];
 				
 			}
 			
@@ -347,7 +384,10 @@
 	//  We got B G R here, but we need RGB
 	int bgrValue = [color intValue];
 	
-	return [UIColor colorWithRed:(bgrValue & 0xFF)/255.0f green:((bgrValue & 0xFF00)>>8)/255.0f blue:((bgrValue & 0xFF0000) >> 16)/255.0f alpha:1.0f];
+	return [UIColor colorWithRed:(bgrValue & 0xFF)/255.0f
+												 green:((bgrValue & 0xFF00)>>8)/255.0f
+													blue:((bgrValue & 0xFF0000) >> 16)/255.0f
+												 alpha:1.0f];
 	
 }
 
@@ -363,17 +403,20 @@
 			
 		case 1:
 			//  Code for Slider.
-			container = [self createSlider:frame withParams:control];
+			container = [self createSlider:frame
+													withParams:control];
 			break;
 			
 		case 2:
 			//  Code for LessMore.
-			container = [self createLessMore:frame withParams:control];
+			container = [self createLessMore:frame
+														withParams:control];
 			break;
 			
 		case 3:
 			//  Code for Reset.
-			container = [self createReset:frame withParams:control];
+			container = [self createReset:frame
+												 withParams:control];
 			break;
 			
 		default:
@@ -385,26 +428,32 @@
 	
 }
 
--(UIView *)createSlider:(CGRect)frame withParams:(CustomControl*)control {
+-(UIView *)createSlider:(CGRect)frame
+						 withParams:(CustomControl*)control {
 	
 	UIView *slider = [[UIView alloc] initWithFrame:frame];
 	
 	UIButton *btnMinus = [UIButton buttonWithType:UIButtonTypeCustom];
-	CGRect frameMinusButton = CGRectMake(0, 0, frame.size.height, frame.size.height);
-	btnMinus.frame = frameMinusButton;
-	[btnMinus setTitle:@"" forState:UIControlStateNormal];
-	btnMinus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
+	btnMinus.frame = CGRectMake(0, 0, frame.size.height, frame.size.height);;
+	[btnMinus setTitle:@""
+						forState:UIControlStateNormal];
+	btnMinus.titleLabel.font = [UIFont fontWithName:control.fFace
+																						 size:control.fSize];
 	btnMinus.backgroundColor = [UIColor clearColor];
 	
-	[btnMinus addTarget:self action:@selector(handleMinus:) forControlEvents:UIControlEventTouchUpInside];
-	[btnMinus setBackgroundImage:[UIImage imageNamed:@"minus.png"] forState:UIControlStateNormal];
+	[btnMinus addTarget:self
+							 action:@selector(handleMinus:)
+		 forControlEvents:UIControlEventTouchUpInside];
+	[btnMinus setBackgroundImage:[UIImage imageNamed:@"minus.png"]
+											forState:UIControlStateNormal];
 	[slider addSubview:btnMinus];
 	
-	CGRect frameSlider = CGRectMake(frame.size.height+5, 0, frame.size.width-(frame.size.height*2+10), frame.size.height);
+	CGRect frameSlider = CGRectMake(frame.size.height + 5, 0, frame.size.width - (frame.size.height * 2 + 10), frame.size.height);
 	
 	UISlider *sliderControl = [[UISlider alloc] init];
 	sliderControl.frame = frameSlider;
-	sliderControl.tag = [[control.uid stringByReplacingOccurrencesOfString:@"Slider" withString:@"999"] integerValue];
+	sliderControl.tag = [[control.uid stringByReplacingOccurrencesOfString:@"Slider"
+																															withString:@"999"] integerValue];
 	sliderControl.minimumValue = control.min;
 	sliderControl.maximumValue = control.max;
 	
@@ -414,38 +463,51 @@
 	sliderControl.minimumTrackTintColor = [control.colors objectAtIndex:1];
 	sliderControl.maximumTrackTintColor = [control.colors objectAtIndex:2];
 	
-	sliderControl.thumbTintColor = [control.colors objectAtIndex:0];
+	[sliderControl setThumbImage:[UIImage imageNamed:@"sliderThumb.png"]
+											forState:UIControlStateNormal];
 	
-	[sliderControl addTarget:self action:@selector(handleSlider:) forControlEvents:UIControlEventValueChanged];
+	[sliderControl addTarget:self
+										action:@selector(handleSlider:)
+					forControlEvents:UIControlEventValueChanged];
 	[slider addSubview:sliderControl];
 	
-	CGRect framePlusButton = CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height);
 	UIButton *btnPlus = [UIButton buttonWithType:UIButtonTypeCustom];
-	btnPlus.frame = framePlusButton;
-	[btnPlus setTitle:@"" forState:UIControlStateNormal];
-	btnPlus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
+	btnPlus.frame = CGRectMake(frame.size.width - frame.size.height, 0, frame.size.height, frame.size.height);
+	[btnPlus setTitle:@""
+					 forState:UIControlStateNormal];
+	btnPlus.titleLabel.font = [UIFont fontWithName:control.fFace
+																						size:control.fSize];
 	btnPlus.backgroundColor = [UIColor clearColor] ;
 	
-	[btnPlus addTarget:self action:@selector(handlePlus:) forControlEvents:UIControlEventTouchUpInside];
-	[btnPlus setBackgroundImage:[UIImage imageNamed:@"plus.png"] forState:UIControlStateNormal];
+	[btnPlus addTarget:self
+							action:@selector(handlePlus:)
+		forControlEvents:UIControlEventTouchUpInside];
+	[btnPlus setBackgroundImage:[UIImage imageNamed:@"plus.png"]
+										 forState:UIControlStateNormal];
 	[slider addSubview:btnPlus];
 	
 	return slider;
+	
 }
 
--(UIView *)createLessMore:(CGRect)frame withParams:(CustomControl*)control {
+-(UIView *)createLessMore:(CGRect)frame
+							 withParams:(CustomControl*)control {
 	
 	UIView *lessMore = [[UIView alloc] initWithFrame:frame];
 	
-	CGRect frameLabel = CGRectMake(frame.size.height, 0, frame.size.width-(frame.size.height*2), frame.size.height);
+	CGRect frameLabel = CGRectMake(frame.size.height, 0, frame.size.width - (frame.size.height * 2), frame.size.height);
 	UILabel *lblValue = [[UILabel alloc] initWithFrame:frameLabel];
 	
 	// Tags the label object for reference and updating the value in event handlers.
-	lblValue.tag = [[control.uid stringByReplacingOccurrencesOfString:@"LessMore" withString:@"101"] integerValue];
-	lblValue.font = [UIFont fontWithName:control.fFace size:control.fSize];
+	lblValue.tag = [[control.uid stringByReplacingOccurrencesOfString:@"LessMore"
+																												 withString:@"666"] integerValue];
+	lblValue.font = [UIFont fontWithName:control.fFace
+																	size:control.fSize];
 	
-	lblValue.text = [self setNumberFormat:[[GoldmineReader getValue] valueForKey:control.uid] withCategory:control.category withFormat:control.format];
-	lblValue.text = [NSString stringWithFormat:@"%@ %@",lblValue.text,control.suffix];
+	lblValue.text = [self setNumberFormat:[[GoldmineReader getValue] valueForKey:control.uid]
+													 withCategory:control.category
+														 withFormat:control.format];
+	lblValue.text = [NSString stringWithFormat:@"%@%@", lblValue.text, control.suffix];
 	lblValue.textAlignment = NSTextAlignmentCenter;
 	
 	// This color is set on the minimum value para-metric
@@ -454,40 +516,54 @@
 	lblValue.lineBreakMode = NSLineBreakByWordWrapping;
 	[lessMore addSubview:lblValue];
 	
-	UIButton *btnMinus = [UIButton buttonWithType:UIButtonTypeCustom];
-	CGRect frameMinusButton = CGRectMake(0, 0, frame.size.height, frame.size.height);
-	btnMinus.frame = frameMinusButton;
-	[btnMinus setTitle:@"" forState:UIControlStateNormal];
-	btnMinus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
-	btnMinus.backgroundColor = [UIColor clearColor];
+	UIButton *btnLess = [UIButton buttonWithType:UIButtonTypeCustom];
+	btnLess.frame = CGRectMake(0, 0, frame.size.height, frame.size.height);
+	[btnLess setTitle:@""
+					 forState:UIControlStateNormal];
+	btnLess.titleLabel.font = [UIFont fontWithName:control.fFace
+																						size:control.fSize];
+	btnLess.backgroundColor = [UIColor clearColor];
 	
-	[btnMinus addTarget:self action:@selector(handleLess:) forControlEvents:UIControlEventTouchUpInside];
-	[btnMinus setBackgroundImage:[UIImage imageNamed:@"less.png"] forState:UIControlStateNormal];
-	[lessMore addSubview:btnMinus];
+	[btnLess addTarget:self
+							action:@selector(handleLess:)
+		forControlEvents:UIControlEventTouchUpInside];
+	[btnLess setBackgroundImage:[UIImage imageNamed:@"less.png"]
+										 forState:UIControlStateNormal];
+	[lessMore addSubview:btnLess];
 	
-	CGRect framePlusButton = CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height);
-	UIButton *btnPlus = [UIButton buttonWithType:UIButtonTypeCustom];
-	btnPlus.frame = framePlusButton;
-	[btnPlus setTitle:@"" forState:UIControlStateNormal];
-	btnPlus.titleLabel.font = [UIFont fontWithName:control.fFace size:control.fSize];
-	btnPlus.backgroundColor = [UIColor clearColor] ;
+	UIButton *btnMore = [UIButton buttonWithType:UIButtonTypeCustom];
+	btnMore.frame = CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, frame.size.height);
+	[btnMore setTitle:@""
+					 forState:UIControlStateNormal];
+	btnMore.titleLabel.font = [UIFont fontWithName:control.fFace
+																						size:control.fSize];
+	btnMore.backgroundColor = [UIColor clearColor] ;
 	
-	[btnPlus addTarget:self action:@selector(handleMore:) forControlEvents:UIControlEventTouchUpInside];
-	[btnPlus setBackgroundImage:[UIImage imageNamed:@"more.png"] forState:UIControlStateNormal];
-	[lessMore addSubview:btnPlus];
+	[btnMore addTarget:self
+							action:@selector(handleMore:)
+		forControlEvents:UIControlEventTouchUpInside];
+	[btnMore setBackgroundImage:[UIImage imageNamed:@"more.png"]
+										 forState:UIControlStateNormal];
+	[lessMore addSubview:btnMore];
 	
 	return lessMore;
+	
 }
 
--(UIView *)createReset:(CGRect)frame withParams:(CustomControl*)control {
+-(UIView *)createReset:(CGRect)frame
+						withParams:(CustomControl*)control {
 	
 	UIView *reset = [[UIView alloc] initWithFrame:frame];
 	UIButton *btnReset = [UIButton buttonWithType:UIButtonTypeCustom];
 	btnReset.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
-	btnReset.tag = [[control.uid stringByReplacingOccurrencesOfString:@"Reset" withString:@"939"] intValue];
-	[btnReset addTarget:self action:@selector(handleReset:) forControlEvents:UIControlEventTouchUpInside];
+	btnReset.tag = [[control.uid stringByReplacingOccurrencesOfString:@"Reset"
+																												 withString:@"888"] intValue];
+	[btnReset addTarget:self
+							 action:@selector(handleReset:)
+		 forControlEvents:UIControlEventTouchUpInside];
 	btnReset.userInteractionEnabled = YES;
-	[btnReset setBackgroundImage:[UIImage imageNamed:@"reset.png"] forState:UIControlStateNormal];
+	[btnReset setBackgroundImage:[UIImage imageNamed:@"reset.png"]
+											forState:UIControlStateNormal];
 	[reset addSubview:btnReset];
 	
 	return reset;
@@ -502,61 +578,26 @@
 	UISlider *slider = (UISlider *)sender;
 	NSString *sliderVal;
 	
-	for(CustomControl *control in customControls) {
+	for (CustomControl *control in customControls) {
 		
-		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999" withString:@"Slider"]]) {
+		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999"
+																																														withString:@"Slider"]]) {
 			
-			// 909 is tag for Slider Label
 			if ([control.suffix isEqualToString:@"%"]) {
 				
-				if (control.step == 1) {
-					
-					slider.value = (int)slider.value;
-					sliderVal = [NSString stringWithFormat:@"%.2f",slider.value / 100];
-					
-				}
-				else {
-					
-					if (roundf(slider.value / control.step) * control.step == 0) {
-						
-						sliderVal = @"0";
-						
-					}
-					else {
-						
-						sliderVal = [NSString stringWithFormat:@"%.3f",slider.value / 100];
-						
-					}
-					
-				}
+				sliderVal = [NSString stringWithFormat:@"%.2f", slider.value / 100];
 				
 			}
 			else {
 				
-				if (control.step == 1) {
-					
-					sliderVal = [NSString stringWithFormat:@"%d", (int)slider.value];
-					
-				}
-				else {
-					
-					if (roundf(slider.value / control.step) * control.step == 0) {
-						
-						sliderVal = @"0";
-						
-					}
-					else {
-						
-						sliderVal = [NSString stringWithFormat:@"%.1f", slider.value];
-						
-					}
-					
-				}
+				sliderVal = [NSString stringWithFormat:@"%d", (int)slider.value];
 				
 			}
 			
-			[GoldmineReader setValue:sliderVal forKey:control.uid];
-			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:sliderVal] forKey:control.uid];
+			[GoldmineReader setValue:sliderVal
+												forKey:control.uid];
+			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:sliderVal]
+													 forKey:control.uid];
 			break;
 			
 		}
@@ -584,7 +625,8 @@
 	
 	for(CustomControl *control in customControls) {
 		
-		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999" withString:@"Slider"]]) {
+		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999"
+																																														withString:@"Slider"]]) {
 			
 			slider.value -= control.step;
 			break;
@@ -614,7 +656,8 @@
 	
 	for(CustomControl *control in customControls) {
 		
-		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999" withString:@"Slider"]]) {
+		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999"
+																																														withString:@"Slider"]]) {
 			
 			slider.value += control.step;
 			break;
@@ -641,14 +684,44 @@
 		
 	}
 	
-	for(CustomControl *control in customControls){
-		if ([control.uid isEqualToString:[[@(less.tag) stringValue] stringByReplacingOccurrencesOfString:@"101" withString:@"LessMore"]]) {
-			int lblValue = [less.text intValue];
-			lblValue -= control.step;
-			less.text = [NSString stringWithFormat:@"%i", lblValue];
+	for (CustomControl *control in customControls) {
+		
+		if ([control.uid isEqualToString:[[@(less.tag) stringValue] stringByReplacingOccurrencesOfString:@"666"
+																																													withString:@"LessMore"]]) {
+			
+			NSString *lblValue = [[GoldmineReader getValue] valueForKey:control.uid];
+			double currentValue = lblValue.doubleValue;
+			
+			if (currentValue > control.min) {
+				
+				currentValue -= control.step;
+				
+				if ([control.suffix isEqualToString:@"%"]) {
+					
+					currentValue *= 100;
+					less.text = [NSString stringWithFormat:@"%d%@", (int)currentValue, control.suffix];
+					[GoldmineReader setValue:[NSString stringWithFormat:@"%f", currentValue / 100.0f]
+														forKey:control.uid];
+					[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", currentValue / 100.0f]]
+															 forKey:control.uid];
+					
+				}
+				else {
+					
+					less.text = [NSString stringWithFormat:@"%i", (int)currentValue];
+					[GoldmineReader setValue:[NSString stringWithFormat:@"%i", (int)currentValue]
+														forKey:control.uid];
+					[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%i", (int)currentValue]]
+															 forKey:control.uid];
+					
+				}
+				
+			}
+			
 			break;
 			
 		}
+		
 	}
 	
 	[self updateLabels];
@@ -670,14 +743,44 @@
 		
 	}
 	
-	for(CustomControl *control in customControls){
-		if ([control.uid isEqualToString:[[@(more.tag) stringValue] stringByReplacingOccurrencesOfString:@"101" withString:@"LessMore"]]) {
-			int lblValue = [more.text intValue];
-			lblValue += control.step;
-			more.text = [NSString stringWithFormat:@"%i", lblValue];
+	for (CustomControl *control in customControls) {
+		
+		if ([control.uid isEqualToString:[[@(more.tag) stringValue] stringByReplacingOccurrencesOfString:@"666"
+																																													withString:@"LessMore"]]) {
+			
+			NSString *lblValue = [[GoldmineReader getValue] valueForKey:control.uid];
+			double currentValue = lblValue.doubleValue;
+			
+			if (currentValue < control.max) {
+				
+				currentValue += control.step;
+				
+				if ([control.suffix isEqualToString:@"%"]) {
+					
+					currentValue *= 100;
+					more.text = [NSString stringWithFormat:@"%d%@", (int)currentValue, control.suffix];
+					[GoldmineReader setValue:[NSString stringWithFormat:@"%f", currentValue / 100.0f]
+														forKey:control.uid];
+					[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%f", currentValue / 100.0f]]
+															 forKey:control.uid];
+					
+				}
+				else {
+					
+					more.text = [NSString stringWithFormat:@"%i", (int)currentValue];
+					[GoldmineReader setValue:[NSString stringWithFormat:@"%i", (int)currentValue]
+														forKey:control.uid];
+					[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%i", (int)currentValue]]
+															 forKey:control.uid];
+					
+				}
+				
+			}
+			
 			break;
 			
 		}
+		
 	}
 	
 	[self updateLabels];
@@ -690,9 +793,10 @@
 	
 	for(CustomControl *control in customControls) {
 		
-		if ([control.uid isEqualToString:[[@(reset.tag) stringValue] stringByReplacingOccurrencesOfString:@"939" withString:@"Reset"]]) {
+		if ([control.uid isEqualToString:[[@(reset.tag) stringValue] stringByReplacingOccurrencesOfString:@"888"
+																																													 withString:@"Reset"]]) {
 			
-			NSArray *components = [[NSArray alloc] initWithArray:[control.defaultCV componentsSeparatedByString:@";"]];
+			NSArray *components = [[NSArray alloc] initWithArray:[control.suffix componentsSeparatedByString:@";"]];
 			
 			for (NSString *str in components) {
 				
@@ -716,7 +820,7 @@
 #pragma mark Sets and Gets Default Values
 -(void)setDefaultValues:(CustomControl *)control {
 	
-	NSString *tempControl = [NSString stringWithFormat:@"%@",[[GoldmineReader getValue] valueForKey:control.uid]];
+	NSString *tempControl = [NSString stringWithFormat:@"%@", [[GoldmineReader getValue] valueForKey:control.uid]];
 	
 	if ([tempControl isEqualToString:@"(null)"]) {
 		
@@ -725,26 +829,24 @@
 		
 		if (number == nil) {
 			
-			control.defaultCV = [[evalFormula evaluateFormula:control.defaultCV withMetrics:[GoldmineReader getValue]] stringValue];
+			control.defaultCV = [[evalFormula evaluateFormula:control.defaultCV
+																						withMetrics:[GoldmineReader getValue]] stringValue];
 			
 		}
 		
 		if ([control.suffix isEqualToString:@"%"]) {
 			
-			if (control.step == 1) {
-				
-				control.defaultCV = [NSString stringWithFormat:@"%.2f",[control.defaultCV floatValue] / 100];
-				
-			}
-			else {
-				
-				control.defaultCV = [NSString stringWithFormat:@"%.3f",[control.defaultCV floatValue] / 100];
-				
-			}
+			control.defaultCV = [NSString stringWithFormat:@"%.2f", [control.defaultCV floatValue] / 100];
+			
+		}
+		else {
+			
+			control.defaultCV = [NSString stringWithFormat:@"%d", [control.defaultCV intValue]];
 			
 		}
 		
-		[GoldmineReader setValue:control.defaultCV forKey:[NSString stringWithFormat:@"%@",control.uid]];
+		[GoldmineReader setValue:control.defaultCV
+											forKey:[NSString stringWithFormat:@"%@",control.uid]];
 		
 	}
 	else {
@@ -754,9 +856,11 @@
 		
 		if (number == nil) {
 			
-			control.defaultCV = [[evalFormula evaluateFormula:control.defaultCV withMetrics:[GoldmineReader getValue]] stringValue];
+			control.defaultCV = [[evalFormula evaluateFormula:control.defaultCV
+																						withMetrics:[GoldmineReader getValue]] stringValue];
 			
-			[GoldmineReader setValue:control.defaultCV forKey:[NSString stringWithFormat:@"%@",control.uid]];
+			[GoldmineReader setValue:control.defaultCV
+												forKey:[NSString stringWithFormat:@"%@", control.uid]];
 			
 		}
 		else {
@@ -764,6 +868,7 @@
 			control.defaultCV = [[GoldmineReader getValue] valueForKey:control.uid];
 			
 		}
+		
 	}
 	
 }
@@ -782,15 +887,19 @@
 		if ([str hasPrefix:@"#"]) {
 			
 			[str deleteCharactersInRange:[str rangeOfString:@"#"]];
-			calculatedValue = [NSString stringWithFormat:@"%@",[evalFormula evaluateFormula:str withMetrics:supportingMetrics]];
+			calculatedValue = [NSString stringWithFormat:@"%@",[evalFormula evaluateFormula:str
+																																					withMetrics:supportingMetrics]];
 			
-			[GoldmineReader setValue:[NSString stringWithFormat:@"%@",calculatedValue] forKey:tempLabel.key];
-			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:calculatedValue] forKey:tempLabel.key];
+			[GoldmineReader setValue:[NSString stringWithFormat:@"%@",calculatedValue]
+												forKey:tempLabel.key];
+			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:calculatedValue]
+													 forKey:tempLabel.key];
 			
 		}
 		else {
 			
-			calculatedValue = [NSString stringWithFormat:@"%@",[evalFormula evaluateFormula:tempLabel.formula withMetrics:supportingMetrics]];
+			calculatedValue = [NSString stringWithFormat:@"%@",[evalFormula evaluateFormula:tempLabel.formula
+																																					withMetrics:supportingMetrics]];
 			
 		}
 		
@@ -798,7 +907,9 @@
 		
 		//-777 is tag for Custom label
 		UILabel *targetLabel = (UILabel *)[self viewWithTag:tag];
-		[targetLabel setText:[self setNumberFormat:calculatedValue withCategory:tempLabel.category withFormat:tempLabel.format]];
+		[targetLabel setText:[self setNumberFormat:calculatedValue
+																	withCategory:tempLabel.category
+																		withFormat:tempLabel.format]];
 		
 	}
 	
@@ -806,7 +917,9 @@
 
 #pragma mark Sets Number Formatting
 
--(NSString*)setNumberFormat:(NSString*)value withCategory:(int)category withFormat:(NSString*)format {
+-(NSString*)setNumberFormat:(NSString*)value
+							 withCategory:(int)category
+								 withFormat:(NSString*)format {
 	
 	NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 	

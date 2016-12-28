@@ -18,11 +18,11 @@
 	// Default value of the control
 	NSString *defaultCV;
 	// Minimum value that the control can take.
-	int min;
+	double min;
 	// Maximum value of the control.
-	int max;
+	double max;
 	// Value for increments/decrements of control
-	int step;
+	double step;
 	// Suffix for the labels.
 	NSString *suffix;
 	// Position for control
@@ -42,9 +42,9 @@
 @property (retain,nonatomic) NSString *uid;
 @property (assign,nonatomic) int type;
 @property (retain,nonatomic) NSString *defaultCV;
-@property (assign,nonatomic) int min;
-@property (assign,nonatomic) int max;
-@property (assign,nonatomic) int step;
+@property (assign,nonatomic) double min;
+@property (assign,nonatomic) double max;
+@property (assign,nonatomic) double step;
 @property (retain,nonatomic) NSString *suffix;
 @property (retain,nonatomic) NSString *position;
 @property (retain,nonatomic) NSString *fFace;

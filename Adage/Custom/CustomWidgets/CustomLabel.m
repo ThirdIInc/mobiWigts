@@ -36,12 +36,15 @@
 	lblValue.font = [UIFont fontWithName:fFace size:fSize];
 	
 	if (fBold == -1) {
-		lblValue.font = [UIFont fontWithName:[NSString stringWithFormat:@"%@-Bold",fFace] size:fSize];
+		lblValue.font = [UIFont fontWithName:[NSString stringWithFormat:@"%@-Bold",fFace]
+																		size:fSize];
 	}
 	
 	if (fItalic == -1) {
-		lblValue.font = [UIFont fontWithName:[NSString stringWithFormat:@"%@-BoldItalic",fFace] size:fSize];
+		lblValue.font = [UIFont fontWithName:[NSString stringWithFormat:@"%@-BoldItalic",fFace]
+																		size:fSize];
 	}
+	
 	lblValue.textColor = fColor;
 	
 	//  Text Alignment Settings

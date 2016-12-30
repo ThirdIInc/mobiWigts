@@ -507,7 +507,7 @@
 	lblValue.text = [self setNumberFormat:[[GoldmineReader getValue] valueForKey:control.uid]
 													 withCategory:control.category
 														 withFormat:control.format];
-	lblValue.text = [NSString stringWithFormat:@"%@%@", lblValue.text, control.suffix];
+	lblValue.text = [NSString stringWithFormat:@"%@", lblValue.text];
 	lblValue.textAlignment = NSTextAlignmentCenter;
 	
 	// This color is set on the minimum value para-metric

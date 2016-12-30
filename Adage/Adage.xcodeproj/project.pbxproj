@@ -12,12 +12,12 @@
 		728CB4971D742681000DCAAA /* MicroStrategyMobileSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */; };
 		728CB4A51D74269E000DCAAA /* FinalBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */; };
 		728CB4F51D742D01000DCAAA /* IconFont in Resources */ = {isa = PBXBuildFile; fileRef = 728CB4F31D742CFB000DCAAA /* IconFont */; };
-		80234F251E13E83500085A9A /* AxisFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F1F1E13E83500085A9A /* AxisFormatter.h */; };
-		80234F261E13E83500085A9A /* AxisFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 80234F201E13E83500085A9A /* AxisFormatter.m */; };
-		80234F271E13E83500085A9A /* BarPlotH.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F211E13E83500085A9A /* BarPlotH.h */; };
-		80234F281E13E83500085A9A /* BarPlotH.m in Sources */ = {isa = PBXBuildFile; fileRef = 80234F221E13E83500085A9A /* BarPlotH.m */; };
-		80234F291E13E83500085A9A /* GraphH.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F231E13E83500085A9A /* GraphH.h */; };
-		80234F2A1E13E83500085A9A /* GraphH.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80234F241E13E83500085A9A /* GraphH.mm */; };
+		80234F251E13E83500085A9A /* CustomAxis.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F1F1E13E83500085A9A /* CustomAxis.h */; };
+		80234F261E13E83500085A9A /* CustomAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 80234F201E13E83500085A9A /* CustomAxis.m */; };
+		80234F271E13E83500085A9A /* CustomBarPlot.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F211E13E83500085A9A /* CustomBarPlot.h */; };
+		80234F281E13E83500085A9A /* CustomBarPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = 80234F221E13E83500085A9A /* CustomBarPlot.m */; };
+		80234F291E13E83500085A9A /* CustomGraph.h in Headers */ = {isa = PBXBuildFile; fileRef = 80234F231E13E83500085A9A /* CustomGraph.h */; };
+		80234F2A1E13E83500085A9A /* CustomGraph.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80234F241E13E83500085A9A /* CustomGraph.mm */; };
 		8590068F1D941BB100C5539E /* MSTRCustomizations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8590068D1D941BB100C5539E /* MSTRCustomizations.plist */; };
 		8ED487541CAAC00300DF2648 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED487501CAABFE100DF2648 /* main.m */; };
 		8ED487581CAAC29300DF2648 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ED487561CAAC29300DF2648 /* Default-Landscape.png */; };
@@ -107,12 +107,12 @@
 		728CB48F1D7424D9000DCAAA /* FinalBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FinalBundle.bundle; path = Resources/FinalBundle.bundle; sourceTree = "<group>"; };
 		728CB4951D7425DE000DCAAA /* MicroStrategyMobileSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MicroStrategyMobileSDKResources.bundle; path = Resources/MicroStrategyMobileSDKResources.bundle; sourceTree = "<group>"; };
 		728CB4F31D742CFB000DCAAA /* IconFont */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IconFont; path = Resources/IconFont; sourceTree = "<group>"; };
-		80234F1F1E13E83500085A9A /* AxisFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AxisFormatter.h; path = CustomWidgets/AxisFormatter.h; sourceTree = "<group>"; };
-		80234F201E13E83500085A9A /* AxisFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AxisFormatter.m; path = CustomWidgets/AxisFormatter.m; sourceTree = "<group>"; };
-		80234F211E13E83500085A9A /* BarPlotH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarPlotH.h; path = CustomWidgets/BarPlotH.h; sourceTree = "<group>"; };
-		80234F221E13E83500085A9A /* BarPlotH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarPlotH.m; path = CustomWidgets/BarPlotH.m; sourceTree = "<group>"; };
-		80234F231E13E83500085A9A /* GraphH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphH.h; path = CustomWidgets/GraphH.h; sourceTree = "<group>"; };
-		80234F241E13E83500085A9A /* GraphH.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GraphH.mm; path = CustomWidgets/GraphH.mm; sourceTree = "<group>"; };
+		80234F1F1E13E83500085A9A /* CustomAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomAxis.h; path = CustomWidgets/CustomAxis.h; sourceTree = "<group>"; };
+		80234F201E13E83500085A9A /* CustomAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomAxis.m; path = CustomWidgets/CustomAxis.m; sourceTree = "<group>"; };
+		80234F211E13E83500085A9A /* CustomBarPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomBarPlot.h; path = CustomWidgets/CustomBarPlot.h; sourceTree = "<group>"; };
+		80234F221E13E83500085A9A /* CustomBarPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomBarPlot.m; path = CustomWidgets/CustomBarPlot.m; sourceTree = "<group>"; };
+		80234F231E13E83500085A9A /* CustomGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomGraph.h; path = CustomWidgets/CustomGraph.h; sourceTree = "<group>"; };
+		80234F241E13E83500085A9A /* CustomGraph.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomGraph.mm; path = CustomWidgets/CustomGraph.mm; sourceTree = "<group>"; };
 		8590068D1D941BB100C5539E /* MSTRCustomizations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MSTRCustomizations.plist; sourceTree = "<group>"; };
 		8E570E181B90F0E500D65413 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		8E570E1A1B90F0ED00D65413 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -341,12 +341,12 @@
 		A7E154911E00080000D6DC85 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				80234F1F1E13E83500085A9A /* AxisFormatter.h */,
-				80234F201E13E83500085A9A /* AxisFormatter.m */,
-				80234F211E13E83500085A9A /* BarPlotH.h */,
-				80234F221E13E83500085A9A /* BarPlotH.m */,
-				80234F231E13E83500085A9A /* GraphH.h */,
-				80234F241E13E83500085A9A /* GraphH.mm */,
+				80234F1F1E13E83500085A9A /* CustomAxis.h */,
+				80234F201E13E83500085A9A /* CustomAxis.m */,
+				80234F211E13E83500085A9A /* CustomBarPlot.h */,
+				80234F221E13E83500085A9A /* CustomBarPlot.m */,
+				80234F231E13E83500085A9A /* CustomGraph.h */,
+				80234F241E13E83500085A9A /* CustomGraph.mm */,
 				A7E154941E00088800D6DC85 /* CustomControl.h */,
 				A7E154951E00088800D6DC85 /* CustomControl.m */,
 				A7E154A41E000A2500D6DC85 /* CustomController.h */,
@@ -373,11 +373,11 @@
 				A7E153EA1E00023D00D6DC85 /* AdageSDK.h in Headers */,
 				A7E154AC1E002EF100D6DC85 /* CustomControl.h in Headers */,
 				A7E154AE1E002EF100D6DC85 /* CustomController.h in Headers */,
-				80234F271E13E83500085A9A /* BarPlotH.h in Headers */,
+				80234F271E13E83500085A9A /* CustomBarPlot.h in Headers */,
 				A7E154B21E002EF100D6DC85 /* EvaluateFormulae.h in Headers */,
-				80234F291E13E83500085A9A /* GraphH.h in Headers */,
+				80234F291E13E83500085A9A /* CustomGraph.h in Headers */,
 				A7E154B01E002EF100D6DC85 /* CustomLabel.h in Headers */,
-				80234F251E13E83500085A9A /* AxisFormatter.h in Headers */,
+				80234F251E13E83500085A9A /* CustomAxis.h in Headers */,
 				A7E154B41E002EF100D6DC85 /* GoldmineReader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,14 +486,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7E154AD1E002EF100D6DC85 /* CustomControl.m in Sources */,
-				80234F2A1E13E83500085A9A /* GraphH.mm in Sources */,
-				80234F281E13E83500085A9A /* BarPlotH.m in Sources */,
+				80234F2A1E13E83500085A9A /* CustomGraph.mm in Sources */,
+				80234F281E13E83500085A9A /* CustomBarPlot.m in Sources */,
 				8ED487541CAAC00300DF2648 /* main.m in Sources */,
 				A7E154B31E002EF100D6DC85 /* EvaluateFormulae.m in Sources */,
 				A7E154B51E002EF100D6DC85 /* GoldmineReader.m in Sources */,
 				A7E154AF1E002EF100D6DC85 /* CustomController.mm in Sources */,
 				A7E154B11E002EF100D6DC85 /* CustomLabel.m in Sources */,
-				80234F261E13E83500085A9A /* AxisFormatter.m in Sources */,
+				80234F261E13E83500085A9A /* CustomAxis.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

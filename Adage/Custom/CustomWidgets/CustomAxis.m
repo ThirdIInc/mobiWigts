@@ -1,5 +1,5 @@
 //
-//  AxisFormatter.m
+//  CustomAxis.m
 //  Adage
 //
 //  Created by Deepika Nahar on 26/12/16.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AxisFormatter.h"
+#import "CustomAxis.h"
 
-@implementation AxisFormatter
+@implementation CustomAxis
 
 static const char sUnits[] = {'\0', 'k', 'm', 'b'};
 static int sMaxUnits = sizeof sUnits - 1;

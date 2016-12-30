@@ -72,7 +72,7 @@
 	lblValue.frame = CGRectMake(0, 0, frame.size.width, lblValue.frame.size.height);
 	lblValue.lineBreakMode = NSLineBreakByWordWrapping;
 	// Uncomment the line below for building and validating the label size and position
-	//lblValue.backgroundColor = [UIColor cyanColor];
+	lblValue.backgroundColor = [UIColor lightGrayColor];
 	[uivContainer addSubview:lblValue];
 	return uivContainer;
 }

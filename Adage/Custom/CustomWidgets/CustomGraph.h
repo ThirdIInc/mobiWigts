@@ -1,13 +1,13 @@
 //
-//  GraphH.h
+//  CustomGraph.h
 //  Adage
 //
 //  Created by Deepika Nahar on 26/12/16.
 //  Copyright © 2016 Third I, Inc. All rights reserved.
 //
 
-#ifndef GraphH_h
-#define GraphH_h
+#ifndef CustomGraph_h
+#define CustomGraph_h
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -23,36 +23,38 @@
 #import "GoldmineReader.h"
 #import "EvaluateFormulae.h"
 
-@interface GraphH : MSIWidgetViewer {
+@interface CustomGraph : MSIWidgetViewer {
 	
-	EvaluateFormulae *objEvaluateFormulae;
+	EvaluateFormulae *evalFormulae;
 	CPTGraphHostingView *barHostView;
 	BarPlotH *barGraph;
 	
-	NSString *strGraphTitle; // Title of the graph
+	// Title of the graph
+	NSString *graphTitle;
 	
-	NSString *fsTitle; // Size of font to be displayed on the graph title
-	NSString *fsSubTitle; // Size of font to be displayed on the graph sub-titles
+	// Size of font to be displayed on the graph title
+	NSString *fsTitle;
 	
 	//Data dictionary to hold supporting metrics
-	NSMutableDictionary *dictSupportingMetrics;
+	NSMutableDictionary *supportingMetrics;
 	
 }
 
 @property (retain, nonatomic) MSIModelData *modelData;
 
--(void)readDataValues;
+-(void)readData;
 -(void)readConstants;
 -(void)readFormulae;
--(void)readFormattingInfo;
+-(void)readFormatting;
 
--(UIView *)renderWidgetContainer:(CGRect)frameRect;
--(UILabel *)createLableWithFrame:(CGRect)frmLabel
-														text:(NSString *)txtLabel
-											 textColor:(UIColor *)clrLabel
-														font:(UIFont *)fLabel
-													 align:(NSTextAlignment)txtAlignment;
+-(UIView *)renderContainer:(CGRect)frame;
+
+-(UILabel *)createLabel:(CGRect)frame
+									 text:(NSString *)text
+									color:(UIColor *)color
+									 font:(UIFont *)font
+									align:(NSTextAlignment)align;
 
 @end
 
-#endif /* GraphH_h */
+#endif /* CustomGraph_h */

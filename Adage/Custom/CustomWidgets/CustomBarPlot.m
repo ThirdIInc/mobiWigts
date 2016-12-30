@@ -1,32 +1,32 @@
 //
-//  BarPlotH.m
+//  CustomBarPlot.m
 //  Adage
 //
 //  Created by Deepika Nahar on 26/12/16.
 //  Copyright © 2016 Third I, Inc. All rights reserved.
 //
 
-#import "BarPlotH.h"
+#import "CustomBarPlot.h"
 
-@implementation BarPlotH
+@implementation CustomBarPlot
 
 @synthesize dataForPlot;
 @synthesize delegate;
-@synthesize intGraphID;
+@synthesize uid;
 // How many bars to display in the graph
-@synthesize intNoOfBars;
+@synthesize noOfBars;
 // Label to be displayed on x-axis
-@synthesize strXAxisLabel;
-// Labels to be displayed on y-axis. Array size to be equal to intNoOfBars
-@synthesize arrYAxisLabels;
-// Fill colors for the bars. Array size to be equal to intNoOfBars
-@synthesize arrColors;
+@synthesize xAxisLabel;
+// Labels to be displayed on y-axis. Array size to be equal to noOfBars
+@synthesize yAxisLabels;
+// Fill colors for the bars. Array size to be equal to noOfBars
+@synthesize colors;
 // Size of font to be displayed on x & y axis labels & data values
-@synthesize fsGraphLabels;
+@synthesize fontSize;
 // Font face for all the lables and data values
-@synthesize ffGraph;
+@synthesize fontFace;
 
--(CPTColor *) getCPTColor:(UIColor *)uiColor {
+-(CPTColor *)getCPTColor:(UIColor *)uiColor {
 	
 	CPTColor *cptColor = [[CPTColor alloc] initWithCGColor:uiColor.CGColor];
 	return cptColor;
@@ -43,7 +43,7 @@
 	float maxPoint = 0;
 	float minPoint = 0;
 	
-	for (int i = 0; i < intNoOfBars; i++) {
+	for (int i = 0; i < noOfBars; i++) {
 		
 		float myNumber = [[dataForPlot objectAtIndex:i] floatValue];
 		
@@ -125,7 +125,7 @@
 	CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
 	axisLineStyle.lineCap = kCGLineCapRound;
 	axisLineStyle.lineWidth = 1.0f;
-	axisLineStyle.lineColor = [self getCPTColor:[arrColors objectAtIndex:1]];
+	axisLineStyle.lineColor = [self getCPTColor:[colors objectAtIndex:1]];
 	
 	graph.paddingLeft = 0.0f;
 	graph.paddingTop = 0.0f;
@@ -154,7 +154,7 @@
 	plotSpace.xRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromFloat(niceMin)
 																									lengthDecimal:CPTDecimalFromFloat(niceMax)];
 	plotSpace.yRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromInt(0)
-																									lengthDecimal:CPTDecimalFromInt(intNoOfBars + 1)];
+																									lengthDecimal:CPTDecimalFromInt(noOfBars + 1)];
 	
 	// Setting y-axis
 	CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
@@ -173,9 +173,9 @@
 	
 	CPTMutableTextStyle *textStyle = [[CPTMutableTextStyle alloc] init];
 	
-	textStyle.color = [self getCPTColor:[arrColors objectAtIndex:1]];
-	textStyle.fontSize = [fsGraphLabels floatValue];
-	textStyle.fontName = ffGraph;
+	textStyle.color = [self getCPTColor:[colors objectAtIndex:1]];
+	textStyle.fontSize = [fontSize floatValue];
+	textStyle.fontName = fontFace;
 	
 	CGSize padSize = CGSizeMake(0, 0);
 	
@@ -183,12 +183,12 @@
 	NSMutableArray *labels = [[NSMutableArray alloc] init];
 	int idx = 1.0f;
 	
-	for (int i=0; i < intNoOfBars; i++) {
+	for (int i=0; i < noOfBars; i++) {
 		
-		CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText:arrYAxisLabels[i]
+		CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText:yAxisLabels[i]
 																											textStyle:textStyle];
 		newLabel.tickLocation = [NSNumber numberWithFloat:idx];
-		CGSize textSize = [arrYAxisLabels[i] sizeWithTextStyle:textStyle];
+		CGSize textSize = [yAxisLabels[i] sizeWithTextStyle:textStyle];
 		
 		if ([[dataForPlot objectAtIndex:i] floatValue] < 0.0) {
 			
@@ -253,7 +253,7 @@
 	x.titleTextStyle = textStyle;
 	//x.title = strXAxisLabel;
 	
-	AxisFormatter *formatter = [[AxisFormatter alloc] init];
+	CustomAxis *formatter = [[CustomAxis alloc] init];
 	x.labelFormatter = formatter;
 	
 	CPTBarPlot *barPlot = [[CPTBarPlot alloc] init];
@@ -322,7 +322,7 @@
 -(CPTFill *)barFillForBarPlot:(CPTBarPlot *)barPlot
 									recordIndex:(NSUInteger)index {
 	
-	CPTFill *fillColor = [CPTFill fillWithColor:[arrColors objectAtIndex:index + 2]];
+	CPTFill *fillColor = [CPTFill fillWithColor:[colors objectAtIndex:index + 2]];
 	return fillColor;
 	
 }
@@ -339,10 +339,10 @@
 	CPTTextLayer *lyrDataLabel = [CPTTextLayer layer];
 	
 	CPTMutableTextStyle *labelTextStyle = [CPTMutableTextStyle textStyle];
-	labelTextStyle.fontSize = [fsGraphLabels floatValue]-1;
+	labelTextStyle.fontSize = [fontSize floatValue]-1;
 	
-	labelTextStyle.fontName = ffGraph;
-	labelTextStyle.color = [self getCPTColor:[arrColors objectAtIndex:1]];
+	labelTextStyle.fontName = fontFace;
+	labelTextStyle.color = [self getCPTColor:[colors objectAtIndex:1]];
 	lyrDataLabel.textStyle = labelTextStyle;
 	
 	NSString *labelString = [NSString stringWithFormat:@"%@", [self.dataForPlot objectAtIndex:index]];

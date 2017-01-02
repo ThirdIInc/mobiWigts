@@ -23,7 +23,7 @@
 		
 		supportingMetrics = [[NSMutableDictionary alloc] init];
 		
-		barGraph = [[BarPlotH alloc] init];
+		barGraph = [[CustomBarPlot alloc] init];
 		//initialize noOfBars to 2
 		barGraph.noOfBars = 2;
 		

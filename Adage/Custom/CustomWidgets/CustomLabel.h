@@ -36,7 +36,8 @@
 //  Font parameters
 @property (strong,nonatomic) NSString *fFace;
 @property (assign,nonatomic) int fSize;
-@property (strong,nonatomic) UIColor *fColor;
+@property (strong,nonatomic) UIColor *colorNegative;
+@property (strong,nonatomic) UIColor *colorPositive;
 @property (assign,nonatomic) int fBold;
 @property (assign,nonatomic) int fItalic;
 @property (assign,nonatomic) int fUnderline;

@@ -63,8 +63,8 @@
 		NSArray *position = [[NSArray alloc] initWithArray:[label.position componentsSeparatedByString:@","]];
 		CGRect frame = CGRectMake([[position firstObject] floatValue], [[position objectAtIndex:1] floatValue], [[position objectAtIndex:2] floatValue], [[position lastObject] floatValue]);
 		
-		// -999<i> is tag for Dynamic label.
-		int tag = [[NSString stringWithFormat:@"%@%d", @"-999", i] intValue];
+		// -777<i> is tag for Dynamic label.
+		int tag = [[NSString stringWithFormat:@"%@%d", @"-777", i] intValue];
 		
 		[self addSubview:[label initializeLabel:frame
 																		withTag:tag]];
@@ -225,15 +225,21 @@
 			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
 																												 andRowIndex:rowID];
 		  metricCell = [row objectAtIndex:0];
-			label.key = [[NSString alloc]initWithFormat:@"%@", metricCell.headerValue];
+			label.key = [[NSString alloc] initWithFormat:@"%@", metricCell.headerValue];
+			
+			MSIPropertyGroup *propertyGroup = metricCell.format;
+			
+			label.colorNegative = [self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																						 propertyID:FontFormattingColor]];
 			
 			// Gets the formula used to dynamically evaluate the value of dynamic label.
 			label.formula = [[metricHeader.elements objectAtIndex:rowID] rawValue];
 			
 			row = [self.modelData arrayWithHeaderValueOfWholeRowByAxisType:ROW_AXIS
 																												 andRowIndex:rowID];
+			
 			MSIMetricValue *metricProperties = [row objectAtIndex:1];
-			MSIPropertyGroup *propertyGroup = metricProperties.format;
+			propertyGroup = metricProperties.format;
 			
 			// Font parameters for the dynamic label.
 			label.fFace = [propertyGroup propertyByPropertySetID:FormattingFont
@@ -248,8 +254,8 @@
 			
 			label.fSize = [[propertyGroup propertyByPropertySetID:FormattingFont
 																								 propertyID:FontFormattingSize] intValue];
-			label.fColor = [self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
-																																			propertyID:FontFormattingColor]];
+			label.colorPositive = [self colorConvertor:[propertyGroup propertyByPropertySetID:FormattingFont
+																																						 propertyID:FontFormattingColor]];
 			
 			// Horizontal alignment parameters for the dynamic label.
 			label.align = [[propertyGroup propertyByPropertySetID:FormattingAlignment
@@ -576,27 +582,15 @@
 -(void)handleSlider:(id)sender {
 	
 	UISlider *slider = (UISlider *)sender;
-	NSString *sliderVal;
 	
 	for (CustomControl *control in customControls) {
 		
 		if ([control.uid isEqualToString:[[@(slider.tag) stringValue] stringByReplacingOccurrencesOfString:@"999"
 																																														withString:@"Slider"]]) {
 			
-			if ([control.suffix isEqualToString:@"%"]) {
-				
-				sliderVal = [NSString stringWithFormat:@"%.2f", slider.value / 100];
-				
-			}
-			else {
-				
-				sliderVal = [NSString stringWithFormat:@"%d", (int)slider.value];
-				
-			}
-			
-			[GoldmineReader setValue:sliderVal
+			[GoldmineReader setValue:[NSString stringWithFormat:@"%.2f", slider.value]
 												forKey:control.uid];
-			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:sliderVal]
+			[supportingMetrics setValue:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%.2f", slider.value]]
 													 forKey:control.uid];
 			break;
 			
@@ -808,6 +802,8 @@
 				[GoldmineReader setValue:value forKey:key];
 				
 			}
+		
+			break;
 			
 		}
 		
@@ -903,13 +899,25 @@
 			
 		}
 		
-		int tag = [[NSString stringWithFormat:@"%@%d",@"-777",i] intValue];
+		int tag = [[NSString stringWithFormat:@"%@%d",@"-777", i] intValue];
 		
 		//-777 is tag for Custom label
 		UILabel *targetLabel = (UILabel *)[self viewWithTag:tag];
-		[targetLabel setText:[self setNumberFormat:calculatedValue
-																	withCategory:tempLabel.category
-																		withFormat:tempLabel.format]];
+		
+		targetLabel.text = [self setNumberFormat:calculatedValue
+																withCategory:tempLabel.category
+																	withFormat:tempLabel.format];
+		
+		if ([calculatedValue floatValue] >=0) {
+			
+			targetLabel.textColor = tempLabel.colorPositive;
+			
+		}
+		else {
+			
+			targetLabel.textColor = tempLabel.colorNegative;
+			
+		}
 		
 	}
 	
@@ -942,6 +950,7 @@
 			
 		default:
 			break;
+			
 	}
 	
 	return [formatter stringFromNumber:[NSDecimalNumber decimalNumberWithString:value]];

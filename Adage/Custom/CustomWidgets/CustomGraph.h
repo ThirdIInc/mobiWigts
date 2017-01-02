@@ -19,7 +19,7 @@
 #import <MicroStrategyMobileSDK/MetricHeader.h>
 #import <MicroStrategyMobileSDK/MetricValue.h>
 
-#import "BarPlotH.h"
+#import "CustomBarPlot.h"
 #import "GoldmineReader.h"
 #import "EvaluateFormulae.h"
 
@@ -27,7 +27,7 @@
 	
 	EvaluateFormulae *evalFormulae;
 	CPTGraphHostingView *barHostView;
-	BarPlotH *barGraph;
+	CustomBarPlot *barGraph;
 	
 	// Title of the graph
 	NSString *graphTitle;

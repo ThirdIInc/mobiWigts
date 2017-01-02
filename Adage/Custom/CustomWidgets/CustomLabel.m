@@ -17,7 +17,8 @@
 // Font parameters
 @synthesize fFace;
 @synthesize fSize;
-@synthesize fColor;
+@synthesize colorNegative;
+@synthesize colorPositive;
 @synthesize fBold;
 @synthesize fItalic;
 @synthesize fUnderline;
@@ -72,7 +73,7 @@
 	lblValue.frame = CGRectMake(0, 0, frame.size.width, lblValue.frame.size.height);
 	lblValue.lineBreakMode = NSLineBreakByWordWrapping;
 	// Uncomment the line below for building and validating the label size and position
-	lblValue.backgroundColor = [UIColor lightGrayColor];
+	//lblValue.backgroundColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0.2];
 	[uivContainer addSubview:lblValue];
 	return uivContainer;
 }

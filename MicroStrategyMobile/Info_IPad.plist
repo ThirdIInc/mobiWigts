@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AWURLScheme</key>
+	<string>mstripadaw</string>
 	<key>CFBundleAllowMixedLocalizations</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>Adage</string>
+	<string>MicroStrategy</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons~ipad</key>
@@ -21,7 +23,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>10.5.001</string>
+	<string>10.2.000</string>
 	<key>CFBundleSignature</key>
 	<string>ms 2</string>
 	<key>CFBundleURLTypes</key>
@@ -32,16 +34,31 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>uniushermstr</string>
+				<string>accom.microstrategy.ipad</string>
 				<string>mstr</string>
 				<string>mstripad</string>
+				<string>fb1414407735488813</string>
+				<string>com.microstrategy.ipad.sc</string>
+				<string>com.microstrategy.ipad.sc2</string>
+				<string>com.good.gd.discovery</string>
+				<string>mstripadaw</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>10.5.0000.0078</string>
+	<string>10.2.0000.0059</string>
+	<key>FacebookAppID</key>
+	<string>1414407735488813</string>
+	<key>GDApplicationID</key>
+	<string>com.microstrategy.mobile</string>
+	<key>GDApplicationVersion</key>
+	<string>10.2.0</string>
+	<key>GDFIPSModeEnabled</key>
+	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>uniusher</string>
+		<string>airwatch</string>
 		<string>workspace</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
@@ -57,33 +74,6 @@
 	<string></string>
 	<key>NSMainNibFile</key>
 	<string>MainWindow-iPad</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>IconFont/font/mobile_analytics_ios.ttf</string>
-		<string>IconFont/font/fontawesome-webfont.ttf</string>
-		<string>IconFont/font/MavenPro-Black.ttf</string>
-		<string>IconFont/font/MavenPro-Bold.ttf</string>
-		<string>IconFont/font/MavenPro-Medium.ttf</string>
-		<string>IconFont/font/MavenPro-Regular.ttf</string>
-		<string>IconFont/font/Roboto-Black.ttf</string>
-		<string>IconFont/font/Roboto-BlackItalic.ttf</string>
-		<string>IconFont/font/Roboto-Bold.ttf</string>
-		<string>IconFont/font/Roboto-BoldItalic.ttf</string>
-		<string>IconFont/font/Roboto-Italic.ttf</string>
-		<string>IconFont/font/Roboto-Light.ttf</string>
-		<string>IconFont/font/Roboto-LightItalic.ttf</string>
-		<string>IconFont/font/Roboto-Medium.ttf</string>
-		<string>IconFont/font/Roboto-MediumItalic.ttf</string>
-		<string>IconFont/font/Roboto-Regular.ttf</string>
-		<string>IconFont/font/Roboto-Thin.ttf</string>
-		<string>IconFont/font/Roboto-ThinItalic.ttf</string>
-		<string>IconFont/font/RobotoCondensed-Bold.ttf</string>
-		<string>IconFont/font/RobotoCondensed-BoldItalic.ttf</string>
-		<string>IconFont/font/RobotoCondensed-Italic.ttf</string>
-		<string>IconFont/font/RobotoCondensed-Light.ttf</string>
-		<string>IconFont/font/RobotoCondensed-LightItalic.ttf</string>
-		<string>IconFont/font/RobotoCondensed-Regular.ttf</string>
-	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

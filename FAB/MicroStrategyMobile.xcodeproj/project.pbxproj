@@ -396,6 +396,7 @@
 					};
 					8E8C944D1BCD136600D8D99A = {
 						DevelopmentTeam = 9XR678NU78;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -623,7 +624,7 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,7 +648,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.fab;
 				PRODUCT_NAME = FAB;
-				PROVISIONING_PROFILE = "173579d7-8b53-4c01-b139-6ef9088a3aa7";
+				PROVISIONING_PROFILE = "2cd220fb-1dce-4de7-9d95-768ae789389d";
+				PROVISIONING_PROFILE_SPECIFIER = FABDistribution;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -682,7 +684,7 @@
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.fab;
 				PRODUCT_NAME = FAB;
-				PROVISIONING_PROFILE = "173579d7-8b53-4c01-b139-6ef9088a3aa7";
+				PROVISIONING_PROFILE = "2cd220fb-1dce-4de7-9d95-768ae789389d";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -727,7 +729,7 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -753,7 +755,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.fab;
 				PRODUCT_NAME = FAB;
-				PROVISIONING_PROFILE = "173579d7-8b53-4c01-b139-6ef9088a3aa7";
+				PROVISIONING_PROFILE = "2cd220fb-1dce-4de7-9d95-768ae789389d";
+				PROVISIONING_PROFILE_SPECIFIER = FABDistribution;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -769,7 +772,7 @@
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,7 +796,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.fab;
 				PRODUCT_NAME = FAB;
-				PROVISIONING_PROFILE = "173579d7-8b53-4c01-b139-6ef9088a3aa7";
+				PROVISIONING_PROFILE = "2cd220fb-1dce-4de7-9d95-768ae789389d";
+				PROVISIONING_PROFILE_SPECIFIER = FABDistribution;
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "arm64 armv7 armv7s";

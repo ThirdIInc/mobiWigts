@@ -415,6 +415,7 @@
 				TargetAttributes = {
 					8E8C944D1BCD136600D8D99A = {
 						DevelopmentTeam = 9XR678NU78;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -593,7 +594,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,7 +621,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
-				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
+				PROVISIONING_PROFILE = "097a1832-0f97-497b-a449-fdfa6ae841d8";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -638,7 +639,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -667,7 +668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
-				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
+				PROVISIONING_PROFILE = "097a1832-0f97-497b-a449-fdfa6ae841d8";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -685,7 +686,7 @@
 				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: I Third Inc";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: I Third Inc";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 9XR678NU78;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -712,7 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdi.adage;
 				PRODUCT_NAME = Adage;
-				PROVISIONING_PROFILE = "0dbfd4eb-1ee4-42ce-926d-a52e02269512";
+				PROVISIONING_PROFILE = "097a1832-0f97-497b-a449-fdfa6ae841d8";
 				PROVISIONING_PROFILE_SPECIFIER = "Wildcard PF";
 				SYMROOT = "${PROJECT_DIR}/build";
 				TARGETED_DEVICE_FAMILY = 2;

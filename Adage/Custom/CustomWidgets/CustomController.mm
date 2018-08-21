@@ -578,7 +578,7 @@
 
 #pragma mark Event Handlers for Controls
 
-//  Calls when slider value changes
+//  Called when slider value changes
 -(void)handleSlider:(id)sender {
 	
 	UISlider *slider = (UISlider *)sender;

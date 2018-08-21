@@ -1,0 +1,111 @@
+<cnf n="i2iDev" cid="d2fd42b1-14b9-4df9-98ac-41df7f0d4ed1" v="1" bld="9.4.1200.0055J" dt="2" cntr="34"><lnk am="1" rt="1" nm="dev.i2ilogic.com" po="443" ipo="true" bu="dev.i2ilogic.com:443/MicroStrategyMobile/servlet/taskProc"/><cty><wsdc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><wsl><ws po="443" pt="MicroStrategyMobile" ty="0" rt="1" udc="true" nm="dev.i2ilogic.com" enm="" uea="false"><wsc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><pdc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><pl><prj pn="DEV: ALL" sn="I2IDEVAPP01" sp="0" udc="true" pid="C21304C9470C1A83E0244DA2ECBE9D17" asd="false" sv="9.4.1200.0055" cd="false" lcs="false"><pc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><rtf/><sc/></prj><prj pn="DEV: C100" sn="I2IDEVAPP01" sp="0" udc="true" pid="D94CDEE741A97AE00BF596B04DD3996D" asd="false" sv="9.4.1200.0055" cd="false" lcs="false"><pc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><rtf/><sc/></prj><prj pn="QA: ABB" sn="I2IDEVAPP01" sp="0" udc="true" pid="7F3F7AAC4D6E577EA6D89D9F459DD736" asd="false" sv="9.4.1200.0055" cd="false" lcs="false"><pc am="1" lo="Administrator" ps="M0tl2D*Wgputd" ow="false"/><rtf/><sc/></prj></pl></ws></wsl><tcs/></cty><gnl><atc v="1"/><ac v="2bacfe"/><ml v="4096"/><nt v="7200"/><mcs v="25"/><ll v="0"/><mls v="50"/><uas v="true"/><usc v="true"/><usl v="true"/><usd v="true"/><fc v="true"/><mgc v="1000"/><plc v="2"/><cc v="1"/><pe v="-1"/><uptc v="-1"/><cvi v="-1"/><crd v="0"/><bgd v="false"/><dul v="true"/><sci v="-1"/><pn v="2"/><rar v="5"/><es v="true"/><eps v="true"/><ea v="true"/><dbpv v="false"/><eopdf v="true"/><efs v="true"/><art v="2"/><ucs v="false"/><cs v=""/><dw v="false"/><ipe v="false"/><npc v="false"/><slml v="false"/><lml v=""/><uifs v="false"/><mns v="true"/><scl v="false"/><eaok v="false"/><aul v="false"/><ccl v="false"/><dmatp v="10"/><dcn v="4"/><dd v="0"/><dbwt v="300"/><dtm v="true"/><drld v="false"/><drn v="false"/><drsc v="false"/><drcl v="false"/><hwa v="false"/><gme v="false"/><gmk v=""/><gmpk v="false"/><gmu v=""/><bss><ebs v="false"/><tod v="0"/><ui v="4"/></bss></gnl><hsc tp="1"><cst><fmt><bkg tp="1"><fll tp="0" clr="0"/></bkg><ttl tp="1"><cap/></ttl><btn stl="3"><fnt clr="16777215"/><brd clr="0"/><fll tp="0" clr="0"/></btn><btnl rc="1" cc="1"/><vw rpt="true" rct="true" stg="true" hlp="true" cld="true"/></fmt><btns><btn><act tp="5"/><cap txt="Shared Library"/><dsc/><icn tp="1"/></btn></btns></cst></hsc></cnf>
+
+<cnf n="Mobile Customizations" cid="57a2aa45-d403-4c75-bace-e095fc59d936" v="1" bld="10.3.0029.0017J" dt="2" cntr="21">
+    <lnk am="1" rt="0" nm="" po="-1" ipo="true" bu=""/>
+    <cty>
+        <wsdc am="1" lo="" ps="" ow="false"/>
+        <wsl>
+            <ws po="80" pt="MicroStrategyMobile" ty="1" rt="0" udc="true" nm="23.253.27.184">
+                <wsc am="1" lo="" ps="" ow="false"/>
+                <pdc am="1" lo="" ps="" ow="false"/>
+                <pl>
+                    <prj pn="inVentiv" sn="10.121.100.186" sp="0" udc="true" pid="87569F18408BED5120ACC9B4E372EB8B" asd="false" sv="10.3.0029.0017" cd="false" lcs="false">
+                        <pc am="1" lo="" ps="" ow="false"/>
+                        <rtf/>
+                        <sc/>
+                    </prj>
+                    <prj pn="GSK - Advair" sn="10.121.100.186" sp="0" udc="true" pid="56D7F65648D8886BA2EA67BC8213CE6A" asd="false" sv="10.3.0029.0017" cd="false" lcs="false">
+                        <pc am="1" lo="" ps="" ow="false"/>
+                        <rtf/>
+                        <sc/>
+                    </prj>
+                    <prj pn="GSK - Tanzeum" sn="10.121.100.186" sp="0" udc="true" pid="5D0E059D45534DDB8922F0BFCB31A875" asd="false" sv="10.3.0029.0017" cd="false" lcs="false">
+                        <pc am="1" lo="" ps="" ow="false"/>
+                        <rtf/>
+                        <sc/>
+                    </prj>
+                    <prj pn="Orexigen" sn="10.121.100.187" sp="0" udc="true" pid="1B5652604D33DFC11659EBB47DEB1334" asd="false" sv="10.3.0029.0017" cd="false" lcs="false">
+                        <pc am="1" lo="" ps="" ow="false"/>
+                        <rtf/>
+                        <sc/>
+                    </prj>
+                </pl>
+            </ws>
+        </wsl>
+        <tcs/>
+    </cty>
+    <gnl>
+        <atc v="1"/>
+        <ac v="2bacfe"/>
+        <nt v="60"/>
+        <mcs v="25"/>
+        <ll v="12"/>
+        <mls v="50"/>
+        <uas v="true"/>
+        <usc v="true"/>
+        <usl v="true"/>
+        <usd v="true"/>
+        <fc v="true"/>
+        <mgc v="50"/>
+        <plc v="1"/>
+        <cc v="1"/>
+        <pe v="-1"/>
+        <uptc v="60"/>
+        <cvi v="600"/>
+        <crd v="0"/>
+        <bgd v="true"/>
+        <dul v="true"/>
+        <sci v="600"/>
+        <pn v="1"/>
+        <rar v="5"/>
+        <es v="true"/>
+        <eps v="true"/>
+        <ea v="true"/>
+        <dbpv v="false"/>
+        <eopdf v="true"/>
+        <efs v="true"/>
+        <art v="2"/>
+        <ucs v="false"/>
+        <cs v=""/>
+        <dw v="false"/>
+        <ipe v="false"/>
+        <npc v="false"/>
+        <slml v="true"/>
+        <lml v=""/>
+        <uifs v="true"/>
+        <mns v="true"/>
+        <scl v="false"/>
+        <eaok v="false"/>
+        <aul v="false"/>
+        <ccl v="false"/>
+        <dmatp v="10"/>
+        <dcn v="4"/>
+        <dd v="0"/>
+        <dbw v="true"/>
+        <dbwt v="300"/>
+        <dtm v="true"/>
+        <dpct v="0"/>
+        <drld v="false"/>
+        <drn v="false"/>
+        <drsc v="false"/>
+        <drcl v="false"/>
+        <daip v="false"/>
+        <hwa v="false"/>
+        <apt v="true"/>
+        <dx v="false"/>
+        <drp v="1"/>
+        <dxd v="30"/>
+        <bss>
+            <ebs v="false"/>
+            <tod v="0"/>
+            <ui v="4"/>
+        </bss>
+    </gnl>
+    <hsc tp="3">
+        <rs>
+            <oi pid="87569F18408BED5120ACC9B4E372EB8B" did="CED742E244178D1A21F224944F5C6856" t="55" st="14081" n="Dummy LandingPage" ab="" pt="inVentiv\Public Objects\Shared Reports\Mobile Customizations\Dummy LandingPage" fid="BB1B59794FAD12002981E99EC603EF0E" avm="0"/>
+            <sobs/>
+            <pb iv="false" clr="14540253" pos="1" opa="1.0"/>
+        </rs>
+    </hsc>
+</cnf>

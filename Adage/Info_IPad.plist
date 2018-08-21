@@ -21,7 +21,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>10.5.000</string>
+	<string>10.5.004</string>
 	<key>CFBundleSignature</key>
 	<string>ms 2</string>
 	<key>CFBundleURLTypes</key>
@@ -40,7 +40,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>10.5.0000.0072</string>
+	<string>10.5.004.0072</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>uniusher</string>
